@@ -1,6 +1,6 @@
 - Hi, I’m @ZiDiYao
-- I’m interested in coding and photography, Nikon and Sony user
-- JAVA , PYthon , and C 
-- Mcmaster University's software engineering 
+- I’m interested in coding and photography. 
+- JAVA , JavaWeb, HTTP, CSS, JS, MySql, MyBatis, SprtingBoot, Python , C , etc.
+- Mcmaster University's Software Engineering 
 - zidiyaocanada@outlook.com or yaoz25@mcmaster.ca
 
