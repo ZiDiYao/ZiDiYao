@@ -5,4 +5,4 @@
 - Mcmaster University's Software Engineering 
 - zidiyaocanada@outlook.com &&& yaoz25@mcmaster.ca
 
-![](https://raw.githubusercontent.com/ZIDIYao/ZIDIYao/main/assets/github-contribution-grid-snake.svg) 
+![暗色](https://raw.githubusercontent.com/ZIDIYao/ZIDIYao/output/github-contribution-grid-snake-dark.svg)
