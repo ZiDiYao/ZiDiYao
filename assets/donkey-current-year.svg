@@ -438,9 +438,9 @@ text{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}
 <rect class="grid" x="819" y="104" width="14" height="17" rx="3"><title>2026-10-25: No contributions on October 25th.</title></rect>
 <rect class="grid" x="819" y="126" width="14" height="17" rx="3"><title>2026-10-26: No contributions on October 26th.</title></rect>
 <rect class="grid" x="819" y="148" width="14" height="17" rx="3"><title>2026-10-27: No contributions on October 27th.</title></rect>
-<rect class="grid" x="819" y="170" width="14" height="17" rx="3"><title>2026-10-28: 10 contributions on October 28th.</title></rect>
+<rect class="grid" x="819" y="170" width="14" height="17" rx="3"><title>2026-10-28: 12 contributions on October 28th.</title></rect>
 <style>@keyframes eat301{0%,74.21918%{opacity:1}74.22018%,97%{opacity:0}100%{opacity:1}}</style>
-<g class="eaten" style="animation:eat301 42s linear infinite;color:#b97840"><title>2026-10-28: 10 contributions on October 28th.</title><use xlink:href="#carrot" x="820" y="169" width="13" height="18"/></g>
+<g class="eaten" style="animation:eat301 42s linear infinite;color:#db8c43"><title>2026-10-28: 12 contributions on October 28th.</title><use xlink:href="#carrot" x="820" y="169" width="13" height="18"/></g>
 <rect class="grid" x="819" y="192" width="14" height="17" rx="3"><title>2026-10-29: No contributions on October 29th.</title></rect>
 <rect class="grid" x="819" y="214" width="14" height="17" rx="3"><title>2026-10-30: No contributions on October 30th.</title></rect>
 <rect class="grid" x="819" y="236" width="14" height="17" rx="3"><title>2026-10-31: No contributions on October 31st.</title></rect>
