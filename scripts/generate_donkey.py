@@ -94,7 +94,7 @@ text{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}
 </g></g></g>''')
     out.append('</svg>')
     ROOT.joinpath('assets').mkdir(exist_ok=True)
-    ROOT.joinpath('assets/donkey-carrots.svg').write_text('\n'.join(out))
+    ROOT.joinpath('assets/donkey-carrots-cute.svg').write_text('\n'.join(out))
     # Route must visit every real day once using neighboring cells only.
     assert len(set(route))==len(days)
     assert all(abs(x2-x1)+abs(y2-y1)==1 for (x1,y1),(x2,y2) in zip([(positions[d][0],positions[d][1]) for d in route],[(positions[d][0],positions[d][1]) for d in route][1:]))
