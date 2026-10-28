@@ -1,80 +1,27 @@
-"""Render a public contribution calendar as a donkey eating carrots. Stdlib only."""
+"""A single animated donkey harvests last year and this year's public contributions."""
 from html.parser import HTMLParser
 from html import escape
-from datetime import date
+from datetime import date, datetime, timedelta
+from zoneinfo import ZoneInfo
 from pathlib import Path
 from urllib.request import Request, urlopen
+import math
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT=Path(__file__).resolve().parents[1]
 class Calendar(HTMLParser):
     def __init__(self):
-        super().__init__(); self.days=[]; self.labels={}; self.tip=None
+        super().__init__();self.days=[];self.labels={};self.tip=None
     def handle_starttag(self,tag,attrs):
         a=dict(attrs)
         if tag=='td' and a.get('data-date') and 'data-level' in a:
             self.days.append((a['data-date'],int(a['data-level']),a['id']))
-        if tag=='tool-tip': self.tip=a.get('for')
+        if tag=='tool-tip':self.tip=a.get('for')
     def handle_data(self,s):
-        if self.tip: self.labels[self.tip]=self.labels.get(self.tip,'')+s
+        if self.tip:self.labels[self.tip]=self.labels.get(self.tip,'')+s
     def handle_endtag(self,tag):
-        if tag=='tool-tip': self.tip=None
+        if tag=='tool-tip':self.tip=None
 
-def generate(source=None):
-    if source is None:
-        req=Request('https://github.com/users/ZiDiYao/contributions',headers={'User-Agent':'ZiDiYao-donkey-calendar'})
-        with urlopen(req,timeout=45) as r: source=r.read().decode()
-    cal=Calendar(); cal.feed(source); days=sorted(cal.days)
-    if len(days)<300 or len(set(d[0] for d in days))!=len(days):
-        raise ValueError('Unexpected calendar format; preserve previous animation.')
-    first=date.fromisoformat(days[0][0]); positions={}
-    for dt,level,ident in days:
-        d=date.fromisoformat(dt); col=(d-first).days//7; row=(d.weekday()+1)%7
-        positions[dt]=(col,row,level,ident)
-    route=sorted(positions,key=lambda dt:(positions[dt][0],positions[dt][1] if positions[dt][0]%2==0 else -positions[dt][1]))
-    # Continuous adjacent steps, including an initial off-grid entrance.
-    def screen(col, row):
-        return 62+(col%27)*35, 100+(col//27)*340+row*36
-    points=[(40,100)]+[screen(positions[dt][0],positions[dt][1]) for dt in route]
-    active=sum(level>0 for _,level,_ in days)
-    out=['''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1040" height="710" viewBox="0 0 1040 710" role="img" aria-labelledby="title desc">
-<title id="title">A little donkey eating ZiDiYao’s contribution carrots</title>
-<desc id="desc">A looping animation based on the real public GitHub contribution calendar. Each carrot is an active day. The donkey visits every day and eats the carrots. Brighter carrots mean more contributions.</desc>
-<defs><symbol id="carrot" viewBox="0 0 18 22"><path d="M8 7Q1 0 5 0Q9 0 10 6Q11-2 14 1Q16 4 11 8" fill="#83ce70"/><path d="M3 8Q8 4 14 9L6 21Q4 23 4 19Z" fill="currentColor"/><path d="m5 11 4 2m-3 3 2 1" stroke="#b75e28" stroke-width="1" stroke-linecap="round"/></symbol></defs>
-<style>
-.bg{fill:#0d1117}.grid{fill:#171f27;stroke:#25303a;stroke-width:.6}.heading{fill:#e6edf3}.muted{fill:#8b949e}
-text{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}
-@media(prefers-color-scheme:light){.bg{fill:#fff}.grid{fill:#f0f3f6;stroke:#d8dee4}.heading{fill:#24292f}.muted{fill:#656d76}}
-@keyframes leg{0%,100%{transform:rotate(-15deg)}50%{transform:rotate(15deg)}}
-@keyframes hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.8px)}}
-.walk{animation:hop .32s ease-in-out infinite}.leg{transform-box:fill-box;transform-origin:50% 0;animation:leg .32s ease-in-out infinite}.back{animation-delay:-.16s}
-@media(prefers-reduced-motion:reduce){.eaten{animation:none!important}.walk,.leg{animation:none}.traveler,.progress{display:none}}
-</style>
-<rect class="bg" x=".5" y=".5" width="1039" height="709" rx="14" stroke="#30363d"/>
-''']
-    lastmonth=None
-    for dt,level,ident in days:
-        col,row,_,_=positions[dt]; x,y=screen(col,row); d=date.fromisoformat(dt)
-        if row==0 and d.month!=lastmonth and (col>0 or d.day<=7):
-            out.append(f'<text x="{x-7}" y="{60+(col//27)*340}" class="muted" font-size="14">{d:%b}</text>');lastmonth=d.month
-        label=escape(dt+': '+cal.labels.get(ident,'').strip())
-        out.append(f'<rect class="grid" x="{x-14}" y="{y-14}" width="28" height="28" rx="5"><title>{label}</title></rect>')
-        if level:
-            idx=route.index(dt)+1; t=idx/(len(points)-1)*90
-            # The mouth reaches this carrot at the corresponding path keyframe.
-            out.append(f'<style>@keyframes eat{idx}'+'{'+f'0%,{t:.5f}%'+'{opacity:1}'+f'{t+.001:.5f}%,97%'+'{opacity:0}100%{opacity:1}}</style>')
-            color=['','#b97840','#db8c43','#f4a04a','#ffbf6b'][level]
-            out.append(f'<g class="eaten" style="animation:eat{idx} 42s linear infinite;color:{color}"><title>{label}</title><use xlink:href="#carrot" x="{x-11}" y="{y-14}" width="22" height="28"/></g>')
-    # Position donkey's muzzle on each cell. Keep a short pause before the loop resets.
-    values=';'.join(f'{x-16} {y-2}' for x,y in points)
-    times=';'.join(f'{i/(len(points)-1)*.9:.7f}' for i in range(len(points)))
-    values+=';'+f'{points[-1][0]-16} {points[-1][1]-2}'
-    times+=';1'
-    transition=next(i for i,dt in enumerate(route,1) if positions[dt][0]>=27)
-    fade_start=(transition-1)/(len(points)-1)*.9
-    fade_end=transition/(len(points)-1)*.9
-    out.append(f'''<g class="traveler"><animateTransform attributeName="transform" type="translate" dur="42s" repeatCount="indefinite" values="{values}" keyTimes="{times}" calcMode="linear"/>
-<animate attributeName="opacity" dur="42s" repeatCount="indefinite" values="1;1;0;0;1;1;0;0;1" keyTimes="0;{fade_start-.001:.7f};{fade_start:.7f};{fade_end:.7f};{fade_end+.001:.7f};.91;.94;.98;1"/>
-<g class="walk" stroke-linecap="round" stroke-linejoin="round">
+DONKEY='''<g class="walk" stroke-linecap="round" stroke-linejoin="round">
 <!-- Tiny hand-drawn donkey, facing the next carrot. -->
 <path d="M-14-2q-8-8-8-1q3 3 6 3" fill="none" stroke="#727c91" stroke-width="2"/>
 <path class="leg back" d="m-9 3-1 10h4l1-10" fill="#697487"/>
@@ -88,14 +35,83 @@ text{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}
 <ellipse cx="16" cy="-4" rx="6" ry="4" fill="#e0d9cc"/>
 <circle cx="13" cy="-11" r="1.2" fill="#253041"/><circle cx="18" cy="-5" r=".8" fill="#6c6870"/>
 <path d="m16-1 3-1" fill="none" stroke="#7e6c60" stroke-width=".8"/>
-</g></g>''')
-    out.append('</svg>')
+</g>'''
+
+def generate(fixtures=None,today=None):
+    today=today or datetime.now(ZoneInfo('America/Toronto')).date()
+    years=[today.year-1,today.year];records={};positions={};route=[]
+    for yi,year in enumerate(years):
+        if fixtures:
+            source=Path(fixtures[yi]).read_text()
+        else:
+            url=f'https://github.com/users/ZiDiYao/contributions?from={year}-01-01&to={year}-12-31'
+            req=Request(url,headers={'User-Agent':'ZiDiYao-donkey-calendar'})
+            with urlopen(req,timeout=45) as r:source=r.read().decode()
+        cal=Calendar();cal.feed(source)
+        fetched={dt:(level,cal.labels.get(ident,'').strip()) for dt,level,ident in cal.days if date.fromisoformat(dt).year==year}
+        expected=(min(today,date(year,12,31))-date(year,1,1)).days+1
+        if sum(date.fromisoformat(dt)<=today for dt in fetched)!=expected:
+            raise ValueError(f'Incomplete {year} calendar; preserve existing animation.')
+        jan=date(year,1,1);start=jan-timedelta(days=(jan.weekday()+1)%7)
+        for n in range((date(year,12,31)-jan).days+1):
+            d=jan+timedelta(days=n);dt=d.isoformat();col=(d-start).days//7;row=(d.weekday()+1)%7
+            panel=yi*2+col//27;x=62+(col%27)*35;y=100+yi*730+(col//27)*330+row*36
+            level,label=fetched.get(dt,(0,''))
+            records[dt]=(d,level,label);positions[dt]=(col,row,panel,x,y)
+        year_route=sorted((dt for dt in records if date.fromisoformat(dt).year==year and date.fromisoformat(dt)<=today),key=lambda dt:(positions[dt][0],positions[dt][1] if positions[dt][0]%2==0 else -positions[dt][1]))
+        route.extend(year_route)
+    # One route and one character, including visible walks through the gutters between panels.
+    points=[(26,positions[route[0]][4])];distances=[0.0];arrivals={}
+    def step(x,y):
+        distances.append(distances[-1]+math.hypot(x-points[-1][0],y-points[-1][1]));points.append((x,y))
+    previous=None
+    for dt in route:
+        col,row,panel,x,y=positions[dt]
+        if previous is not None and panel!=positions[previous][2]:
+            prev_panel=positions[previous][2];prev_top=100+(prev_panel//2)*730+(prev_panel%2)*330
+            next_top=100+(panel//2)*730+(panel%2)*330;bridge=(prev_top+216+next_top)/2
+            step(1010,points[-1][1]);step(1010,bridge);step(27,bridge);step(27,y)
+        step(x,y);arrivals[dt]=distances[-1];previous=dt
+    travel_end=.94;total=distances[-1];duration=110
+    out=['''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1040" height="1430" viewBox="0 0 1040 1430" role="img" aria-labelledby="title desc">
+<title id="title">One little donkey, two years of contribution carrots</title>
+<desc id="desc">Last year's full GitHub contribution calendar followed by this year to date. A single donkey follows one continuous route and eats the carrots, then the entire animation loops. Future dates are empty.</desc>
+<defs><symbol id="carrot" viewBox="0 0 18 22"><path d="M8 7Q1 0 5 0Q9 0 10 6Q11-2 14 1Q16 4 11 8" fill="#83ce70"/><path d="M3 8Q8 4 14 9L6 21Q4 23 4 19Z" fill="currentColor"/><path d="m5 11 4 2m-3 3 2 1" stroke="#b75e28" stroke-width="1" stroke-linecap="round"/></symbol></defs>
+<style>
+.bg{fill:#0d1117}.grid{fill:#171f27;stroke:#25303a;stroke-width:.6}.year{fill:#e6edf3}.muted{fill:#8b949e}text{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}
+@media(prefers-color-scheme:light){.bg{fill:#fff}.grid{fill:#f0f3f6;stroke:#d8dee4}.year{fill:#24292f}.muted{fill:#656d76}}
+@keyframes leg{0%,100%{transform:rotate(-15deg)}50%{transform:rotate(15deg)}}@keyframes hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.8px)}}
+.walk{animation:hop .32s ease-in-out infinite}.leg{transform-box:fill-box;transform-origin:50% 0;animation:leg .32s ease-in-out infinite}.back{animation-delay:-.16s}
+@media(prefers-reduced-motion:reduce){.eaten,.walk,.leg{animation:none!important}.traveler{display:none}}
+</style><rect class="bg" x=".5" y=".5" width="1039" height="1429" rx="14" stroke="#30363d"/>''']
+    for yi,year in enumerate(years):out.append(f'<text x="38" y="{30+yi*730}" class="year" font-size="21" font-weight="600">{year}</text>')
+    months=set()
+    for dt,(d,level,label) in sorted(records.items()):
+        col,row,panel,x,y=positions[dt];yi=years.index(d.year)
+        if (d.year,d.month,panel) not in months:
+            if (col%27)>0 and d.day==1 and row>0:month_x=x+7
+            else:month_x=x-7
+            out.append(f'<text x="{month_x}" y="{60+yi*730+(col//27)*330}" class="muted" font-size="14">{d:%b}</text>');months.add((d.year,d.month,panel))
+        title=escape(dt+': '+(label if d<=today else 'Future date'))
+        future=' opacity=".3"' if d>today else ''
+        out.append(f'<rect class="grid" x="{x-14}" y="{y-14}" width="28" height="28" rx="5"{future}><title>{title}</title></rect>')
+        if level and d<=today:
+            t=arrivals[dt]/total*travel_end*100;idx=len(out)
+            out.append(f'<style>@keyframes eat{idx}'+'{'+f'0%,{t:.6f}%'+'{opacity:1}'+f'{t+.0001:.6f}%,98%'+'{opacity:0}100%{opacity:1}}</style>')
+            color=['','#b97840','#db8c43','#f4a04a','#ffbf6b'][level]
+            out.append(f'<g class="eaten" style="animation:eat{idx} {duration}s linear infinite;color:{color}"><title>{title}</title><use xlink:href="#carrot" x="{x-11}" y="{y-14}" width="22" height="28"/></g>')
+    values=';'.join(f'{x-16} {y-2}' for x,y in points)+f';{points[-1][0]-16} {points[-1][1]-2}'
+    keytimes=';'.join(f'{d/total*travel_end:.8f}' for d in distances)+';1'
+    out.append(f'<g class="traveler"><animateTransform attributeName="transform" type="translate" dur="{duration}s" repeatCount="indefinite" values="{values}" keyTimes="{keytimes}" calcMode="linear"/><animate attributeName="opacity" dur="{duration}s" repeatCount="indefinite" values="1;1;0;0;1" keyTimes="0;.95;.97;.99;1"/>'+DONKEY+'</g></svg>')
+    assert len(set(route))==len(route)==sum(d<=today for d,_,_ in records.values())
+    previous_year_days=(date(years[0]+1,1,1)-date(years[0],1,1)).days
+    assert all(date.fromisoformat(dt).year==years[0] for dt in route[:previous_year_days])
+    assert max(arrivals[d] for d in route if date.fromisoformat(d).year==years[0])<min(arrivals[d] for d in route if date.fromisoformat(d).year==years[1])
+    xml='\n'.join(out)
+    assert xml.count('class="traveler"')==1
     ROOT.joinpath('assets').mkdir(exist_ok=True)
-    ROOT.joinpath('assets/donkey-heatmap.svg').write_text('\n'.join(out))
-    # Route must visit every real day once using neighboring cells only.
-    assert len(set(route))==len(days)
-    assert all(abs(x2-x1)+abs(y2-y1)==1 for (x1,y1),(x2,y2) in zip([(positions[d][0],positions[d][1]) for d in route],[(positions[d][0],positions[d][1]) for d in route][1:]))
-    print(f'{len(days)} real days, {active} carrots; continuous route verified.')
+    ROOT.joinpath('assets/donkey-two-years.svg').write_text(xml)
+    print(f'{years}: {len(route)} real days, {sum(level>0 and d<=today for d,level,_ in records.values())} carrots; one donkey and year order verified.')
 if __name__=='__main__':
     import sys
-    generate(Path(sys.argv[1]).read_text() if len(sys.argv)>1 else None)
+    generate(sys.argv[1:3] or None)
