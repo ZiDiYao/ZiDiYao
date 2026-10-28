@@ -1,1 +1,1 @@
-<img src="assets/donkey-two-years.svg" width="1040" alt="One little donkey eating carrots across two years of my GitHub contributions." />
+<img src="assets/donkey-current-year.svg" width="1040" alt="A little donkey eating carrots across my current calendar year contribution heatmap." />

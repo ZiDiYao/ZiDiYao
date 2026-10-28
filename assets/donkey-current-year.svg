@@ -1,0 +1,527 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1040" height="300" viewBox="0 0 1040 300" role="img" aria-labelledby="title desc">
+<title id="title">A little donkey eating ZiDiYao’s contribution carrots</title>
+<desc id="desc">A looping animation based on the real public GitHub contribution calendar. Each carrot is an active day. The donkey visits every day and eats the carrots. Brighter carrots mean more contributions.</desc>
+<defs><symbol id="carrot" viewBox="0 0 18 22"><path d="M8 7Q1 0 5 0Q9 0 10 6Q11-2 14 1Q16 4 11 8" fill="#83ce70"/><path d="M3 8Q8 4 14 9L6 21Q4 23 4 19Z" fill="currentColor"/><path d="m5 11 4 2m-3 3 2 1" stroke="#b75e28" stroke-width="1" stroke-linecap="round"/></symbol></defs>
+<style>
+.bg{fill:#0d1117}.grid{fill:#171f27;stroke:#25303a;stroke-width:.6}.heading{fill:#e6edf3}.muted{fill:#8b949e}
+text{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}
+@media(prefers-color-scheme:light){.bg{fill:#fff}.grid{fill:#f0f3f6;stroke:#d8dee4}.heading{fill:#24292f}.muted{fill:#656d76}}
+@keyframes leg{0%,100%{transform:rotate(-15deg)}50%{transform:rotate(15deg)}}
+@keyframes hop{0%,100%{transform:translateY(0)}50%{transform:translateY(-1.8px)}}
+.walk{animation:hop .32s ease-in-out infinite}.leg{transform-box:fill-box;transform-origin:50% 0;animation:leg .32s ease-in-out infinite}.back{animation-delay:-.16s}
+@media(prefers-reduced-motion:reduce){.eaten{animation:none!important}.walk,.leg{animation:none}.traveler,.progress{display:none}}
+</style>
+<rect class="bg" x=".5" y=".5" width="1039" height="299" rx="14" stroke="#30363d"/>
+
+<text x="28" y="34" class="heading" font-size="17" font-weight="600">2026</text>
+<rect class="grid" x="45" y="192" width="14" height="17" rx="3"><title>2026-01-01: No contributions on January 1st.</title></rect>
+<rect class="grid" x="45" y="214" width="14" height="17" rx="3"><title>2026-01-02: No contributions on January 2nd.</title></rect>
+<rect class="grid" x="45" y="236" width="14" height="17" rx="3"><title>2026-01-03: No contributions on January 3rd.</title></rect>
+<text x="63" y="70" class="muted" font-size="10">Jan</text>
+<rect class="grid" x="63" y="104" width="14" height="17" rx="3"><title>2026-01-04: No contributions on January 4th.</title></rect>
+<rect class="grid" x="63" y="126" width="14" height="17" rx="3"><title>2026-01-05: No contributions on January 5th.</title></rect>
+<rect class="grid" x="63" y="148" width="14" height="17" rx="3"><title>2026-01-06: 5 contributions on January 6th.</title></rect>
+<style>@keyframes eat8{0%,1.97260%{opacity:1}1.97360%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat8 42s linear infinite;color:#b97840"><title>2026-01-06: 5 contributions on January 6th.</title><use xlink:href="#carrot" x="64" y="147" width="13" height="18"/></g>
+<rect class="grid" x="63" y="170" width="14" height="17" rx="3"><title>2026-01-07: 6 contributions on January 7th.</title></rect>
+<style>@keyframes eat7{0%,1.72603%{opacity:1}1.72703%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat7 42s linear infinite;color:#b97840"><title>2026-01-07: 6 contributions on January 7th.</title><use xlink:href="#carrot" x="64" y="169" width="13" height="18"/></g>
+<rect class="grid" x="63" y="192" width="14" height="17" rx="3"><title>2026-01-08: No contributions on January 8th.</title></rect>
+<rect class="grid" x="63" y="214" width="14" height="17" rx="3"><title>2026-01-09: No contributions on January 9th.</title></rect>
+<rect class="grid" x="63" y="236" width="14" height="17" rx="3"><title>2026-01-10: No contributions on January 10th.</title></rect>
+<rect class="grid" x="81" y="104" width="14" height="17" rx="3"><title>2026-01-11: 2 contributions on January 11th.</title></rect>
+<style>@keyframes eat11{0%,2.71233%{opacity:1}2.71333%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat11 42s linear infinite;color:#b97840"><title>2026-01-11: 2 contributions on January 11th.</title><use xlink:href="#carrot" x="82" y="103" width="13" height="18"/></g>
+<rect class="grid" x="81" y="126" width="14" height="17" rx="3"><title>2026-01-12: 2 contributions on January 12th.</title></rect>
+<style>@keyframes eat12{0%,2.95890%{opacity:1}2.95990%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat12 42s linear infinite;color:#b97840"><title>2026-01-12: 2 contributions on January 12th.</title><use xlink:href="#carrot" x="82" y="125" width="13" height="18"/></g>
+<rect class="grid" x="81" y="148" width="14" height="17" rx="3"><title>2026-01-13: 1 contribution on January 13th.</title></rect>
+<style>@keyframes eat13{0%,3.20548%{opacity:1}3.20648%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat13 42s linear infinite;color:#b97840"><title>2026-01-13: 1 contribution on January 13th.</title><use xlink:href="#carrot" x="82" y="147" width="13" height="18"/></g>
+<rect class="grid" x="81" y="170" width="14" height="17" rx="3"><title>2026-01-14: 1 contribution on January 14th.</title></rect>
+<style>@keyframes eat14{0%,3.45205%{opacity:1}3.45305%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat14 42s linear infinite;color:#b97840"><title>2026-01-14: 1 contribution on January 14th.</title><use xlink:href="#carrot" x="82" y="169" width="13" height="18"/></g>
+<rect class="grid" x="81" y="192" width="14" height="17" rx="3"><title>2026-01-15: No contributions on January 15th.</title></rect>
+<rect class="grid" x="81" y="214" width="14" height="17" rx="3"><title>2026-01-16: No contributions on January 16th.</title></rect>
+<rect class="grid" x="81" y="236" width="14" height="17" rx="3"><title>2026-01-17: No contributions on January 17th.</title></rect>
+<rect class="grid" x="99" y="104" width="14" height="17" rx="3"><title>2026-01-18: 1 contribution on January 18th.</title></rect>
+<style>@keyframes eat24{0%,5.91781%{opacity:1}5.91881%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat24 42s linear infinite;color:#b97840"><title>2026-01-18: 1 contribution on January 18th.</title><use xlink:href="#carrot" x="100" y="103" width="13" height="18"/></g>
+<rect class="grid" x="99" y="126" width="14" height="17" rx="3"><title>2026-01-19: 1 contribution on January 19th.</title></rect>
+<style>@keyframes eat23{0%,5.67123%{opacity:1}5.67223%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat23 42s linear infinite;color:#b97840"><title>2026-01-19: 1 contribution on January 19th.</title><use xlink:href="#carrot" x="100" y="125" width="13" height="18"/></g>
+<rect class="grid" x="99" y="148" width="14" height="17" rx="3"><title>2026-01-20: 2 contributions on January 20th.</title></rect>
+<style>@keyframes eat22{0%,5.42466%{opacity:1}5.42566%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat22 42s linear infinite;color:#b97840"><title>2026-01-20: 2 contributions on January 20th.</title><use xlink:href="#carrot" x="100" y="147" width="13" height="18"/></g>
+<rect class="grid" x="99" y="170" width="14" height="17" rx="3"><title>2026-01-21: 9 contributions on January 21st.</title></rect>
+<style>@keyframes eat21{0%,5.17808%{opacity:1}5.17908%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat21 42s linear infinite;color:#b97840"><title>2026-01-21: 9 contributions on January 21st.</title><use xlink:href="#carrot" x="100" y="169" width="13" height="18"/></g>
+<rect class="grid" x="99" y="192" width="14" height="17" rx="3"><title>2026-01-22: No contributions on January 22nd.</title></rect>
+<rect class="grid" x="99" y="214" width="14" height="17" rx="3"><title>2026-01-23: No contributions on January 23rd.</title></rect>
+<rect class="grid" x="99" y="236" width="14" height="17" rx="3"><title>2026-01-24: No contributions on January 24th.</title></rect>
+<rect class="grid" x="117" y="104" width="14" height="17" rx="3"><title>2026-01-25: 9 contributions on January 25th.</title></rect>
+<style>@keyframes eat25{0%,6.16438%{opacity:1}6.16538%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat25 42s linear infinite;color:#b97840"><title>2026-01-25: 9 contributions on January 25th.</title><use xlink:href="#carrot" x="118" y="103" width="13" height="18"/></g>
+<rect class="grid" x="117" y="126" width="14" height="17" rx="3"><title>2026-01-26: 7 contributions on January 26th.</title></rect>
+<style>@keyframes eat26{0%,6.41096%{opacity:1}6.41196%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat26 42s linear infinite;color:#b97840"><title>2026-01-26: 7 contributions on January 26th.</title><use xlink:href="#carrot" x="118" y="125" width="13" height="18"/></g>
+<rect class="grid" x="117" y="148" width="14" height="17" rx="3"><title>2026-01-27: 6 contributions on January 27th.</title></rect>
+<style>@keyframes eat27{0%,6.65753%{opacity:1}6.65853%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat27 42s linear infinite;color:#b97840"><title>2026-01-27: 6 contributions on January 27th.</title><use xlink:href="#carrot" x="118" y="147" width="13" height="18"/></g>
+<rect class="grid" x="117" y="170" width="14" height="17" rx="3"><title>2026-01-28: No contributions on January 28th.</title></rect>
+<rect class="grid" x="117" y="192" width="14" height="17" rx="3"><title>2026-01-29: No contributions on January 29th.</title></rect>
+<rect class="grid" x="117" y="214" width="14" height="17" rx="3"><title>2026-01-30: No contributions on January 30th.</title></rect>
+<rect class="grid" x="117" y="236" width="14" height="17" rx="3"><title>2026-01-31: No contributions on January 31st.</title></rect>
+<text x="135" y="70" class="muted" font-size="10">Feb</text>
+<rect class="grid" x="135" y="104" width="14" height="17" rx="3"><title>2026-02-01: No contributions on February 1st.</title></rect>
+<rect class="grid" x="135" y="126" width="14" height="17" rx="3"><title>2026-02-02: No contributions on February 2nd.</title></rect>
+<rect class="grid" x="135" y="148" width="14" height="17" rx="3"><title>2026-02-03: No contributions on February 3rd.</title></rect>
+<rect class="grid" x="135" y="170" width="14" height="17" rx="3"><title>2026-02-04: No contributions on February 4th.</title></rect>
+<rect class="grid" x="135" y="192" width="14" height="17" rx="3"><title>2026-02-05: No contributions on February 5th.</title></rect>
+<rect class="grid" x="135" y="214" width="14" height="17" rx="3"><title>2026-02-06: No contributions on February 6th.</title></rect>
+<rect class="grid" x="135" y="236" width="14" height="17" rx="3"><title>2026-02-07: No contributions on February 7th.</title></rect>
+<rect class="grid" x="153" y="104" width="14" height="17" rx="3"><title>2026-02-08: No contributions on February 8th.</title></rect>
+<rect class="grid" x="153" y="126" width="14" height="17" rx="3"><title>2026-02-09: No contributions on February 9th.</title></rect>
+<rect class="grid" x="153" y="148" width="14" height="17" rx="3"><title>2026-02-10: 6 contributions on February 10th.</title></rect>
+<style>@keyframes eat41{0%,10.10959%{opacity:1}10.11059%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat41 42s linear infinite;color:#b97840"><title>2026-02-10: 6 contributions on February 10th.</title><use xlink:href="#carrot" x="154" y="147" width="13" height="18"/></g>
+<rect class="grid" x="153" y="170" width="14" height="17" rx="3"><title>2026-02-11: 1 contribution on February 11th.</title></rect>
+<style>@keyframes eat42{0%,10.35616%{opacity:1}10.35716%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat42 42s linear infinite;color:#b97840"><title>2026-02-11: 1 contribution on February 11th.</title><use xlink:href="#carrot" x="154" y="169" width="13" height="18"/></g>
+<rect class="grid" x="153" y="192" width="14" height="17" rx="3"><title>2026-02-12: No contributions on February 12th.</title></rect>
+<rect class="grid" x="153" y="214" width="14" height="17" rx="3"><title>2026-02-13: No contributions on February 13th.</title></rect>
+<rect class="grid" x="153" y="236" width="14" height="17" rx="3"><title>2026-02-14: No contributions on February 14th.</title></rect>
+<rect class="grid" x="171" y="104" width="14" height="17" rx="3"><title>2026-02-15: No contributions on February 15th.</title></rect>
+<rect class="grid" x="171" y="126" width="14" height="17" rx="3"><title>2026-02-16: No contributions on February 16th.</title></rect>
+<rect class="grid" x="171" y="148" width="14" height="17" rx="3"><title>2026-02-17: No contributions on February 17th.</title></rect>
+<rect class="grid" x="171" y="170" width="14" height="17" rx="3"><title>2026-02-18: No contributions on February 18th.</title></rect>
+<rect class="grid" x="171" y="192" width="14" height="17" rx="3"><title>2026-02-19: No contributions on February 19th.</title></rect>
+<rect class="grid" x="171" y="214" width="14" height="17" rx="3"><title>2026-02-20: No contributions on February 20th.</title></rect>
+<rect class="grid" x="171" y="236" width="14" height="17" rx="3"><title>2026-02-21: No contributions on February 21st.</title></rect>
+<rect class="grid" x="189" y="104" width="14" height="17" rx="3"><title>2026-02-22: 1 contribution on February 22nd.</title></rect>
+<style>@keyframes eat53{0%,13.06849%{opacity:1}13.06949%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat53 42s linear infinite;color:#b97840"><title>2026-02-22: 1 contribution on February 22nd.</title><use xlink:href="#carrot" x="190" y="103" width="13" height="18"/></g>
+<rect class="grid" x="189" y="126" width="14" height="17" rx="3"><title>2026-02-23: No contributions on February 23rd.</title></rect>
+<rect class="grid" x="189" y="148" width="14" height="17" rx="3"><title>2026-02-24: No contributions on February 24th.</title></rect>
+<rect class="grid" x="189" y="170" width="14" height="17" rx="3"><title>2026-02-25: No contributions on February 25th.</title></rect>
+<rect class="grid" x="189" y="192" width="14" height="17" rx="3"><title>2026-02-26: No contributions on February 26th.</title></rect>
+<rect class="grid" x="189" y="214" width="14" height="17" rx="3"><title>2026-02-27: No contributions on February 27th.</title></rect>
+<rect class="grid" x="189" y="236" width="14" height="17" rx="3"><title>2026-02-28: No contributions on February 28th.</title></rect>
+<text x="207" y="70" class="muted" font-size="10">Mar</text>
+<rect class="grid" x="207" y="104" width="14" height="17" rx="3"><title>2026-03-01: No contributions on March 1st.</title></rect>
+<rect class="grid" x="207" y="126" width="14" height="17" rx="3"><title>2026-03-02: No contributions on March 2nd.</title></rect>
+<rect class="grid" x="207" y="148" width="14" height="17" rx="3"><title>2026-03-03: No contributions on March 3rd.</title></rect>
+<rect class="grid" x="207" y="170" width="14" height="17" rx="3"><title>2026-03-04: No contributions on March 4th.</title></rect>
+<rect class="grid" x="207" y="192" width="14" height="17" rx="3"><title>2026-03-05: No contributions on March 5th.</title></rect>
+<rect class="grid" x="207" y="214" width="14" height="17" rx="3"><title>2026-03-06: No contributions on March 6th.</title></rect>
+<rect class="grid" x="207" y="236" width="14" height="17" rx="3"><title>2026-03-07: No contributions on March 7th.</title></rect>
+<rect class="grid" x="225" y="104" width="14" height="17" rx="3"><title>2026-03-08: No contributions on March 8th.</title></rect>
+<rect class="grid" x="225" y="126" width="14" height="17" rx="3"><title>2026-03-09: No contributions on March 9th.</title></rect>
+<rect class="grid" x="225" y="148" width="14" height="17" rx="3"><title>2026-03-10: No contributions on March 10th.</title></rect>
+<rect class="grid" x="225" y="170" width="14" height="17" rx="3"><title>2026-03-11: No contributions on March 11th.</title></rect>
+<rect class="grid" x="225" y="192" width="14" height="17" rx="3"><title>2026-03-12: No contributions on March 12th.</title></rect>
+<rect class="grid" x="225" y="214" width="14" height="17" rx="3"><title>2026-03-13: No contributions on March 13th.</title></rect>
+<rect class="grid" x="225" y="236" width="14" height="17" rx="3"><title>2026-03-14: No contributions on March 14th.</title></rect>
+<rect class="grid" x="243" y="104" width="14" height="17" rx="3"><title>2026-03-15: No contributions on March 15th.</title></rect>
+<rect class="grid" x="243" y="126" width="14" height="17" rx="3"><title>2026-03-16: No contributions on March 16th.</title></rect>
+<rect class="grid" x="243" y="148" width="14" height="17" rx="3"><title>2026-03-17: No contributions on March 17th.</title></rect>
+<rect class="grid" x="243" y="170" width="14" height="17" rx="3"><title>2026-03-18: No contributions on March 18th.</title></rect>
+<rect class="grid" x="243" y="192" width="14" height="17" rx="3"><title>2026-03-19: No contributions on March 19th.</title></rect>
+<rect class="grid" x="243" y="214" width="14" height="17" rx="3"><title>2026-03-20: No contributions on March 20th.</title></rect>
+<rect class="grid" x="243" y="236" width="14" height="17" rx="3"><title>2026-03-21: No contributions on March 21st.</title></rect>
+<rect class="grid" x="261" y="104" width="14" height="17" rx="3"><title>2026-03-22: No contributions on March 22nd.</title></rect>
+<rect class="grid" x="261" y="126" width="14" height="17" rx="3"><title>2026-03-23: No contributions on March 23rd.</title></rect>
+<rect class="grid" x="261" y="148" width="14" height="17" rx="3"><title>2026-03-24: No contributions on March 24th.</title></rect>
+<rect class="grid" x="261" y="170" width="14" height="17" rx="3"><title>2026-03-25: No contributions on March 25th.</title></rect>
+<rect class="grid" x="261" y="192" width="14" height="17" rx="3"><title>2026-03-26: No contributions on March 26th.</title></rect>
+<rect class="grid" x="261" y="214" width="14" height="17" rx="3"><title>2026-03-27: No contributions on March 27th.</title></rect>
+<rect class="grid" x="261" y="236" width="14" height="17" rx="3"><title>2026-03-28: No contributions on March 28th.</title></rect>
+<rect class="grid" x="279" y="104" width="14" height="17" rx="3"><title>2026-03-29: No contributions on March 29th.</title></rect>
+<rect class="grid" x="279" y="126" width="14" height="17" rx="3"><title>2026-03-30: No contributions on March 30th.</title></rect>
+<rect class="grid" x="279" y="148" width="14" height="17" rx="3"><title>2026-03-31: No contributions on March 31st.</title></rect>
+<rect class="grid" x="279" y="170" width="14" height="17" rx="3"><title>2026-04-01: No contributions on April 1st.</title></rect>
+<rect class="grid" x="279" y="192" width="14" height="17" rx="3"><title>2026-04-02: No contributions on April 2nd.</title></rect>
+<rect class="grid" x="279" y="214" width="14" height="17" rx="3"><title>2026-04-03: No contributions on April 3rd.</title></rect>
+<rect class="grid" x="279" y="236" width="14" height="17" rx="3"><title>2026-04-04: No contributions on April 4th.</title></rect>
+<text x="297" y="70" class="muted" font-size="10">Apr</text>
+<rect class="grid" x="297" y="104" width="14" height="17" rx="3"><title>2026-04-05: No contributions on April 5th.</title></rect>
+<rect class="grid" x="297" y="126" width="14" height="17" rx="3"><title>2026-04-06: No contributions on April 6th.</title></rect>
+<rect class="grid" x="297" y="148" width="14" height="17" rx="3"><title>2026-04-07: No contributions on April 7th.</title></rect>
+<rect class="grid" x="297" y="170" width="14" height="17" rx="3"><title>2026-04-08: No contributions on April 8th.</title></rect>
+<rect class="grid" x="297" y="192" width="14" height="17" rx="3"><title>2026-04-09: No contributions on April 9th.</title></rect>
+<rect class="grid" x="297" y="214" width="14" height="17" rx="3"><title>2026-04-10: No contributions on April 10th.</title></rect>
+<rect class="grid" x="297" y="236" width="14" height="17" rx="3"><title>2026-04-11: No contributions on April 11th.</title></rect>
+<rect class="grid" x="315" y="104" width="14" height="17" rx="3"><title>2026-04-12: No contributions on April 12th.</title></rect>
+<rect class="grid" x="315" y="126" width="14" height="17" rx="3"><title>2026-04-13: No contributions on April 13th.</title></rect>
+<rect class="grid" x="315" y="148" width="14" height="17" rx="3"><title>2026-04-14: No contributions on April 14th.</title></rect>
+<rect class="grid" x="315" y="170" width="14" height="17" rx="3"><title>2026-04-15: No contributions on April 15th.</title></rect>
+<rect class="grid" x="315" y="192" width="14" height="17" rx="3"><title>2026-04-16: No contributions on April 16th.</title></rect>
+<rect class="grid" x="315" y="214" width="14" height="17" rx="3"><title>2026-04-17: No contributions on April 17th.</title></rect>
+<rect class="grid" x="315" y="236" width="14" height="17" rx="3"><title>2026-04-18: No contributions on April 18th.</title></rect>
+<rect class="grid" x="333" y="104" width="14" height="17" rx="3"><title>2026-04-19: No contributions on April 19th.</title></rect>
+<rect class="grid" x="333" y="126" width="14" height="17" rx="3"><title>2026-04-20: No contributions on April 20th.</title></rect>
+<rect class="grid" x="333" y="148" width="14" height="17" rx="3"><title>2026-04-21: No contributions on April 21st.</title></rect>
+<rect class="grid" x="333" y="170" width="14" height="17" rx="3"><title>2026-04-22: No contributions on April 22nd.</title></rect>
+<rect class="grid" x="333" y="192" width="14" height="17" rx="3"><title>2026-04-23: No contributions on April 23rd.</title></rect>
+<rect class="grid" x="333" y="214" width="14" height="17" rx="3"><title>2026-04-24: No contributions on April 24th.</title></rect>
+<rect class="grid" x="333" y="236" width="14" height="17" rx="3"><title>2026-04-25: No contributions on April 25th.</title></rect>
+<rect class="grid" x="351" y="104" width="14" height="17" rx="3"><title>2026-04-26: No contributions on April 26th.</title></rect>
+<rect class="grid" x="351" y="126" width="14" height="17" rx="3"><title>2026-04-27: 3 contributions on April 27th.</title></rect>
+<style>@keyframes eat121{0%,29.83562%{opacity:1}29.83662%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat121 42s linear infinite;color:#b97840"><title>2026-04-27: 3 contributions on April 27th.</title><use xlink:href="#carrot" x="352" y="125" width="13" height="18"/></g>
+<rect class="grid" x="351" y="148" width="14" height="17" rx="3"><title>2026-04-28: 6 contributions on April 28th.</title></rect>
+<style>@keyframes eat120{0%,29.58904%{opacity:1}29.59004%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat120 42s linear infinite;color:#b97840"><title>2026-04-28: 6 contributions on April 28th.</title><use xlink:href="#carrot" x="352" y="147" width="13" height="18"/></g>
+<rect class="grid" x="351" y="170" width="14" height="17" rx="3"><title>2026-04-29: 3 contributions on April 29th.</title></rect>
+<style>@keyframes eat119{0%,29.34247%{opacity:1}29.34347%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat119 42s linear infinite;color:#b97840"><title>2026-04-29: 3 contributions on April 29th.</title><use xlink:href="#carrot" x="352" y="169" width="13" height="18"/></g>
+<rect class="grid" x="351" y="192" width="14" height="17" rx="3"><title>2026-04-30: No contributions on April 30th.</title></rect>
+<rect class="grid" x="351" y="214" width="14" height="17" rx="3"><title>2026-05-01: No contributions on May 1st.</title></rect>
+<rect class="grid" x="351" y="236" width="14" height="17" rx="3"><title>2026-05-02: No contributions on May 2nd.</title></rect>
+<text x="369" y="70" class="muted" font-size="10">May</text>
+<rect class="grid" x="369" y="104" width="14" height="17" rx="3"><title>2026-05-03: No contributions on May 3rd.</title></rect>
+<rect class="grid" x="369" y="126" width="14" height="17" rx="3"><title>2026-05-04: No contributions on May 4th.</title></rect>
+<rect class="grid" x="369" y="148" width="14" height="17" rx="3"><title>2026-05-05: No contributions on May 5th.</title></rect>
+<rect class="grid" x="369" y="170" width="14" height="17" rx="3"><title>2026-05-06: No contributions on May 6th.</title></rect>
+<rect class="grid" x="369" y="192" width="14" height="17" rx="3"><title>2026-05-07: No contributions on May 7th.</title></rect>
+<rect class="grid" x="369" y="214" width="14" height="17" rx="3"><title>2026-05-08: No contributions on May 8th.</title></rect>
+<rect class="grid" x="369" y="236" width="14" height="17" rx="3"><title>2026-05-09: No contributions on May 9th.</title></rect>
+<rect class="grid" x="387" y="104" width="14" height="17" rx="3"><title>2026-05-10: No contributions on May 10th.</title></rect>
+<rect class="grid" x="387" y="126" width="14" height="17" rx="3"><title>2026-05-11: No contributions on May 11th.</title></rect>
+<rect class="grid" x="387" y="148" width="14" height="17" rx="3"><title>2026-05-12: No contributions on May 12th.</title></rect>
+<rect class="grid" x="387" y="170" width="14" height="17" rx="3"><title>2026-05-13: No contributions on May 13th.</title></rect>
+<rect class="grid" x="387" y="192" width="14" height="17" rx="3"><title>2026-05-14: No contributions on May 14th.</title></rect>
+<rect class="grid" x="387" y="214" width="14" height="17" rx="3"><title>2026-05-15: No contributions on May 15th.</title></rect>
+<rect class="grid" x="387" y="236" width="14" height="17" rx="3"><title>2026-05-16: No contributions on May 16th.</title></rect>
+<rect class="grid" x="405" y="104" width="14" height="17" rx="3"><title>2026-05-17: No contributions on May 17th.</title></rect>
+<rect class="grid" x="405" y="126" width="14" height="17" rx="3"><title>2026-05-18: No contributions on May 18th.</title></rect>
+<rect class="grid" x="405" y="148" width="14" height="17" rx="3"><title>2026-05-19: No contributions on May 19th.</title></rect>
+<rect class="grid" x="405" y="170" width="14" height="17" rx="3"><title>2026-05-20: No contributions on May 20th.</title></rect>
+<rect class="grid" x="405" y="192" width="14" height="17" rx="3"><title>2026-05-21: No contributions on May 21st.</title></rect>
+<rect class="grid" x="405" y="214" width="14" height="17" rx="3"><title>2026-05-22: No contributions on May 22nd.</title></rect>
+<rect class="grid" x="405" y="236" width="14" height="17" rx="3"><title>2026-05-23: No contributions on May 23rd.</title></rect>
+<rect class="grid" x="423" y="104" width="14" height="17" rx="3"><title>2026-05-24: No contributions on May 24th.</title></rect>
+<rect class="grid" x="423" y="126" width="14" height="17" rx="3"><title>2026-05-25: No contributions on May 25th.</title></rect>
+<rect class="grid" x="423" y="148" width="14" height="17" rx="3"><title>2026-05-26: No contributions on May 26th.</title></rect>
+<rect class="grid" x="423" y="170" width="14" height="17" rx="3"><title>2026-05-27: No contributions on May 27th.</title></rect>
+<rect class="grid" x="423" y="192" width="14" height="17" rx="3"><title>2026-05-28: No contributions on May 28th.</title></rect>
+<rect class="grid" x="423" y="214" width="14" height="17" rx="3"><title>2026-05-29: No contributions on May 29th.</title></rect>
+<rect class="grid" x="423" y="236" width="14" height="17" rx="3"><title>2026-05-30: No contributions on May 30th.</title></rect>
+<rect class="grid" x="441" y="104" width="14" height="17" rx="3"><title>2026-05-31: No contributions on May 31st.</title></rect>
+<rect class="grid" x="441" y="126" width="14" height="17" rx="3"><title>2026-06-01: No contributions on June 1st.</title></rect>
+<rect class="grid" x="441" y="148" width="14" height="17" rx="3"><title>2026-06-02: No contributions on June 2nd.</title></rect>
+<rect class="grid" x="441" y="170" width="14" height="17" rx="3"><title>2026-06-03: No contributions on June 3rd.</title></rect>
+<rect class="grid" x="441" y="192" width="14" height="17" rx="3"><title>2026-06-04: No contributions on June 4th.</title></rect>
+<rect class="grid" x="441" y="214" width="14" height="17" rx="3"><title>2026-06-05: No contributions on June 5th.</title></rect>
+<rect class="grid" x="441" y="236" width="14" height="17" rx="3"><title>2026-06-06: No contributions on June 6th.</title></rect>
+<text x="459" y="70" class="muted" font-size="10">Jun</text>
+<rect class="grid" x="459" y="104" width="14" height="17" rx="3"><title>2026-06-07: No contributions on June 7th.</title></rect>
+<rect class="grid" x="459" y="126" width="14" height="17" rx="3"><title>2026-06-08: No contributions on June 8th.</title></rect>
+<rect class="grid" x="459" y="148" width="14" height="17" rx="3"><title>2026-06-09: No contributions on June 9th.</title></rect>
+<rect class="grid" x="459" y="170" width="14" height="17" rx="3"><title>2026-06-10: No contributions on June 10th.</title></rect>
+<rect class="grid" x="459" y="192" width="14" height="17" rx="3"><title>2026-06-11: No contributions on June 11th.</title></rect>
+<rect class="grid" x="459" y="214" width="14" height="17" rx="3"><title>2026-06-12: No contributions on June 12th.</title></rect>
+<rect class="grid" x="459" y="236" width="14" height="17" rx="3"><title>2026-06-13: No contributions on June 13th.</title></rect>
+<rect class="grid" x="477" y="104" width="14" height="17" rx="3"><title>2026-06-14: No contributions on June 14th.</title></rect>
+<rect class="grid" x="477" y="126" width="14" height="17" rx="3"><title>2026-06-15: No contributions on June 15th.</title></rect>
+<rect class="grid" x="477" y="148" width="14" height="17" rx="3"><title>2026-06-16: No contributions on June 16th.</title></rect>
+<rect class="grid" x="477" y="170" width="14" height="17" rx="3"><title>2026-06-17: No contributions on June 17th.</title></rect>
+<rect class="grid" x="477" y="192" width="14" height="17" rx="3"><title>2026-06-18: No contributions on June 18th.</title></rect>
+<rect class="grid" x="477" y="214" width="14" height="17" rx="3"><title>2026-06-19: No contributions on June 19th.</title></rect>
+<rect class="grid" x="477" y="236" width="14" height="17" rx="3"><title>2026-06-20: No contributions on June 20th.</title></rect>
+<rect class="grid" x="495" y="104" width="14" height="17" rx="3"><title>2026-06-21: No contributions on June 21st.</title></rect>
+<rect class="grid" x="495" y="126" width="14" height="17" rx="3"><title>2026-06-22: No contributions on June 22nd.</title></rect>
+<rect class="grid" x="495" y="148" width="14" height="17" rx="3"><title>2026-06-23: No contributions on June 23rd.</title></rect>
+<rect class="grid" x="495" y="170" width="14" height="17" rx="3"><title>2026-06-24: No contributions on June 24th.</title></rect>
+<rect class="grid" x="495" y="192" width="14" height="17" rx="3"><title>2026-06-25: No contributions on June 25th.</title></rect>
+<rect class="grid" x="495" y="214" width="14" height="17" rx="3"><title>2026-06-26: No contributions on June 26th.</title></rect>
+<rect class="grid" x="495" y="236" width="14" height="17" rx="3"><title>2026-06-27: No contributions on June 27th.</title></rect>
+<rect class="grid" x="513" y="104" width="14" height="17" rx="3"><title>2026-06-28: No contributions on June 28th.</title></rect>
+<rect class="grid" x="513" y="126" width="14" height="17" rx="3"><title>2026-06-29: No contributions on June 29th.</title></rect>
+<rect class="grid" x="513" y="148" width="14" height="17" rx="3"><title>2026-06-30: No contributions on June 30th.</title></rect>
+<rect class="grid" x="513" y="170" width="14" height="17" rx="3"><title>2026-07-01: No contributions on July 1st.</title></rect>
+<rect class="grid" x="513" y="192" width="14" height="17" rx="3"><title>2026-07-02: No contributions on July 2nd.</title></rect>
+<rect class="grid" x="513" y="214" width="14" height="17" rx="3"><title>2026-07-03: No contributions on July 3rd.</title></rect>
+<rect class="grid" x="513" y="236" width="14" height="17" rx="3"><title>2026-07-04: No contributions on July 4th.</title></rect>
+<text x="531" y="70" class="muted" font-size="10">Jul</text>
+<rect class="grid" x="531" y="104" width="14" height="17" rx="3"><title>2026-07-05: 1 contribution on July 5th.</title></rect>
+<style>@keyframes eat192{0%,47.34247%{opacity:1}47.34347%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat192 42s linear infinite;color:#b97840"><title>2026-07-05: 1 contribution on July 5th.</title><use xlink:href="#carrot" x="532" y="103" width="13" height="18"/></g>
+<rect class="grid" x="531" y="126" width="14" height="17" rx="3"><title>2026-07-06: 2 contributions on July 6th.</title></rect>
+<style>@keyframes eat191{0%,47.09589%{opacity:1}47.09689%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat191 42s linear infinite;color:#b97840"><title>2026-07-06: 2 contributions on July 6th.</title><use xlink:href="#carrot" x="532" y="125" width="13" height="18"/></g>
+<rect class="grid" x="531" y="148" width="14" height="17" rx="3"><title>2026-07-07: No contributions on July 7th.</title></rect>
+<rect class="grid" x="531" y="170" width="14" height="17" rx="3"><title>2026-07-08: No contributions on July 8th.</title></rect>
+<rect class="grid" x="531" y="192" width="14" height="17" rx="3"><title>2026-07-09: No contributions on July 9th.</title></rect>
+<rect class="grid" x="531" y="214" width="14" height="17" rx="3"><title>2026-07-10: 2 contributions on July 10th.</title></rect>
+<style>@keyframes eat187{0%,46.10959%{opacity:1}46.11059%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat187 42s linear infinite;color:#b97840"><title>2026-07-10: 2 contributions on July 10th.</title><use xlink:href="#carrot" x="532" y="213" width="13" height="18"/></g>
+<rect class="grid" x="531" y="236" width="14" height="17" rx="3"><title>2026-07-11: No contributions on July 11th.</title></rect>
+<rect class="grid" x="549" y="104" width="14" height="17" rx="3"><title>2026-07-12: No contributions on July 12th.</title></rect>
+<rect class="grid" x="549" y="126" width="14" height="17" rx="3"><title>2026-07-13: No contributions on July 13th.</title></rect>
+<rect class="grid" x="549" y="148" width="14" height="17" rx="3"><title>2026-07-14: No contributions on July 14th.</title></rect>
+<rect class="grid" x="549" y="170" width="14" height="17" rx="3"><title>2026-07-15: No contributions on July 15th.</title></rect>
+<rect class="grid" x="549" y="192" width="14" height="17" rx="3"><title>2026-07-16: No contributions on July 16th.</title></rect>
+<rect class="grid" x="549" y="214" width="14" height="17" rx="3"><title>2026-07-17: No contributions on July 17th.</title></rect>
+<rect class="grid" x="549" y="236" width="14" height="17" rx="3"><title>2026-07-18: No contributions on July 18th.</title></rect>
+<rect class="grid" x="567" y="104" width="14" height="17" rx="3"><title>2026-07-19: No contributions on July 19th.</title></rect>
+<rect class="grid" x="567" y="126" width="14" height="17" rx="3"><title>2026-07-20: No contributions on July 20th.</title></rect>
+<rect class="grid" x="567" y="148" width="14" height="17" rx="3"><title>2026-07-21: No contributions on July 21st.</title></rect>
+<rect class="grid" x="567" y="170" width="14" height="17" rx="3"><title>2026-07-22: No contributions on July 22nd.</title></rect>
+<rect class="grid" x="567" y="192" width="14" height="17" rx="3"><title>2026-07-23: 3 contributions on July 23rd.</title></rect>
+<style>@keyframes eat202{0%,49.80822%{opacity:1}49.80922%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat202 42s linear infinite;color:#b97840"><title>2026-07-23: 3 contributions on July 23rd.</title><use xlink:href="#carrot" x="568" y="191" width="13" height="18"/></g>
+<rect class="grid" x="567" y="214" width="14" height="17" rx="3"><title>2026-07-24: 1 contribution on July 24th.</title></rect>
+<style>@keyframes eat201{0%,49.56164%{opacity:1}49.56264%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat201 42s linear infinite;color:#b97840"><title>2026-07-24: 1 contribution on July 24th.</title><use xlink:href="#carrot" x="568" y="213" width="13" height="18"/></g>
+<rect class="grid" x="567" y="236" width="14" height="17" rx="3"><title>2026-07-25: No contributions on July 25th.</title></rect>
+<rect class="grid" x="585" y="104" width="14" height="17" rx="3"><title>2026-07-26: No contributions on July 26th.</title></rect>
+<rect class="grid" x="585" y="126" width="14" height="17" rx="3"><title>2026-07-27: No contributions on July 27th.</title></rect>
+<rect class="grid" x="585" y="148" width="14" height="17" rx="3"><title>2026-07-28: No contributions on July 28th.</title></rect>
+<rect class="grid" x="585" y="170" width="14" height="17" rx="3"><title>2026-07-29: No contributions on July 29th.</title></rect>
+<rect class="grid" x="585" y="192" width="14" height="17" rx="3"><title>2026-07-30: No contributions on July 30th.</title></rect>
+<rect class="grid" x="585" y="214" width="14" height="17" rx="3"><title>2026-07-31: No contributions on July 31st.</title></rect>
+<rect class="grid" x="585" y="236" width="14" height="17" rx="3"><title>2026-08-01: No contributions on August 1st.</title></rect>
+<text x="603" y="70" class="muted" font-size="10">Aug</text>
+<rect class="grid" x="603" y="104" width="14" height="17" rx="3"><title>2026-08-02: No contributions on August 2nd.</title></rect>
+<rect class="grid" x="603" y="126" width="14" height="17" rx="3"><title>2026-08-03: No contributions on August 3rd.</title></rect>
+<rect class="grid" x="603" y="148" width="14" height="17" rx="3"><title>2026-08-04: No contributions on August 4th.</title></rect>
+<rect class="grid" x="603" y="170" width="14" height="17" rx="3"><title>2026-08-05: No contributions on August 5th.</title></rect>
+<rect class="grid" x="603" y="192" width="14" height="17" rx="3"><title>2026-08-06: No contributions on August 6th.</title></rect>
+<rect class="grid" x="603" y="214" width="14" height="17" rx="3"><title>2026-08-07: No contributions on August 7th.</title></rect>
+<rect class="grid" x="603" y="236" width="14" height="17" rx="3"><title>2026-08-08: No contributions on August 8th.</title></rect>
+<rect class="grid" x="621" y="104" width="14" height="17" rx="3"><title>2026-08-09: No contributions on August 9th.</title></rect>
+<rect class="grid" x="621" y="126" width="14" height="17" rx="3"><title>2026-08-10: No contributions on August 10th.</title></rect>
+<rect class="grid" x="621" y="148" width="14" height="17" rx="3"><title>2026-08-11: No contributions on August 11th.</title></rect>
+<rect class="grid" x="621" y="170" width="14" height="17" rx="3"><title>2026-08-12: 15 contributions on August 12th.</title></rect>
+<style>@keyframes eat224{0%,55.23288%{opacity:1}55.23388%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat224 42s linear infinite;color:#db8c43"><title>2026-08-12: 15 contributions on August 12th.</title><use xlink:href="#carrot" x="622" y="169" width="13" height="18"/></g>
+<rect class="grid" x="621" y="192" width="14" height="17" rx="3"><title>2026-08-13: No contributions on August 13th.</title></rect>
+<rect class="grid" x="621" y="214" width="14" height="17" rx="3"><title>2026-08-14: No contributions on August 14th.</title></rect>
+<rect class="grid" x="621" y="236" width="14" height="17" rx="3"><title>2026-08-15: No contributions on August 15th.</title></rect>
+<rect class="grid" x="639" y="104" width="14" height="17" rx="3"><title>2026-08-16: 14 contributions on August 16th.</title></rect>
+<style>@keyframes eat234{0%,57.69863%{opacity:1}57.69963%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat234 42s linear infinite;color:#db8c43"><title>2026-08-16: 14 contributions on August 16th.</title><use xlink:href="#carrot" x="640" y="103" width="13" height="18"/></g>
+<rect class="grid" x="639" y="126" width="14" height="17" rx="3"><title>2026-08-17: 23 contributions on August 17th.</title></rect>
+<style>@keyframes eat233{0%,57.45205%{opacity:1}57.45305%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat233 42s linear infinite;color:#f4a04a"><title>2026-08-17: 23 contributions on August 17th.</title><use xlink:href="#carrot" x="640" y="125" width="13" height="18"/></g>
+<rect class="grid" x="639" y="148" width="14" height="17" rx="3"><title>2026-08-18: 3 contributions on August 18th.</title></rect>
+<style>@keyframes eat232{0%,57.20548%{opacity:1}57.20648%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat232 42s linear infinite;color:#b97840"><title>2026-08-18: 3 contributions on August 18th.</title><use xlink:href="#carrot" x="640" y="147" width="13" height="18"/></g>
+<rect class="grid" x="639" y="170" width="14" height="17" rx="3"><title>2026-08-19: 31 contributions on August 19th.</title></rect>
+<style>@keyframes eat231{0%,56.95890%{opacity:1}56.95990%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat231 42s linear infinite;color:#f4a04a"><title>2026-08-19: 31 contributions on August 19th.</title><use xlink:href="#carrot" x="640" y="169" width="13" height="18"/></g>
+<rect class="grid" x="639" y="192" width="14" height="17" rx="3"><title>2026-08-20: 12 contributions on August 20th.</title></rect>
+<style>@keyframes eat230{0%,56.71233%{opacity:1}56.71333%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat230 42s linear infinite;color:#db8c43"><title>2026-08-20: 12 contributions on August 20th.</title><use xlink:href="#carrot" x="640" y="191" width="13" height="18"/></g>
+<rect class="grid" x="639" y="214" width="14" height="17" rx="3"><title>2026-08-21: 45 contributions on August 21st.</title></rect>
+<style>@keyframes eat229{0%,56.46575%{opacity:1}56.46675%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat229 42s linear infinite;color:#ffbf6b"><title>2026-08-21: 45 contributions on August 21st.</title><use xlink:href="#carrot" x="640" y="213" width="13" height="18"/></g>
+<rect class="grid" x="639" y="236" width="14" height="17" rx="3"><title>2026-08-22: 3 contributions on August 22nd.</title></rect>
+<style>@keyframes eat228{0%,56.21918%{opacity:1}56.22018%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat228 42s linear infinite;color:#b97840"><title>2026-08-22: 3 contributions on August 22nd.</title><use xlink:href="#carrot" x="640" y="235" width="13" height="18"/></g>
+<rect class="grid" x="657" y="104" width="14" height="17" rx="3"><title>2026-08-23: 2 contributions on August 23rd.</title></rect>
+<style>@keyframes eat235{0%,57.94521%{opacity:1}57.94621%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat235 42s linear infinite;color:#b97840"><title>2026-08-23: 2 contributions on August 23rd.</title><use xlink:href="#carrot" x="658" y="103" width="13" height="18"/></g>
+<rect class="grid" x="657" y="126" width="14" height="17" rx="3"><title>2026-08-24: No contributions on August 24th.</title></rect>
+<rect class="grid" x="657" y="148" width="14" height="17" rx="3"><title>2026-08-25: 12 contributions on August 25th.</title></rect>
+<style>@keyframes eat237{0%,58.43836%{opacity:1}58.43936%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat237 42s linear infinite;color:#db8c43"><title>2026-08-25: 12 contributions on August 25th.</title><use xlink:href="#carrot" x="658" y="147" width="13" height="18"/></g>
+<rect class="grid" x="657" y="170" width="14" height="17" rx="3"><title>2026-08-26: 6 contributions on August 26th.</title></rect>
+<style>@keyframes eat238{0%,58.68493%{opacity:1}58.68593%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat238 42s linear infinite;color:#b97840"><title>2026-08-26: 6 contributions on August 26th.</title><use xlink:href="#carrot" x="658" y="169" width="13" height="18"/></g>
+<rect class="grid" x="657" y="192" width="14" height="17" rx="3"><title>2026-08-27: No contributions on August 27th.</title></rect>
+<rect class="grid" x="657" y="214" width="14" height="17" rx="3"><title>2026-08-28: No contributions on August 28th.</title></rect>
+<rect class="grid" x="657" y="236" width="14" height="17" rx="3"><title>2026-08-29: No contributions on August 29th.</title></rect>
+<rect class="grid" x="675" y="104" width="14" height="17" rx="3"><title>2026-08-30: 3 contributions on August 30th.</title></rect>
+<style>@keyframes eat248{0%,61.15068%{opacity:1}61.15168%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat248 42s linear infinite;color:#b97840"><title>2026-08-30: 3 contributions on August 30th.</title><use xlink:href="#carrot" x="676" y="103" width="13" height="18"/></g>
+<rect class="grid" x="675" y="126" width="14" height="17" rx="3"><title>2026-08-31: No contributions on August 31st.</title></rect>
+<rect class="grid" x="675" y="148" width="14" height="17" rx="3"><title>2026-09-01: 11 contributions on September 1st.</title></rect>
+<style>@keyframes eat246{0%,60.65753%{opacity:1}60.65853%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat246 42s linear infinite;color:#db8c43"><title>2026-09-01: 11 contributions on September 1st.</title><use xlink:href="#carrot" x="676" y="147" width="13" height="18"/></g>
+<rect class="grid" x="675" y="170" width="14" height="17" rx="3"><title>2026-09-02: 65 contributions on September 2nd.</title></rect>
+<style>@keyframes eat245{0%,60.41096%{opacity:1}60.41196%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat245 42s linear infinite;color:#ffbf6b"><title>2026-09-02: 65 contributions on September 2nd.</title><use xlink:href="#carrot" x="676" y="169" width="13" height="18"/></g>
+<rect class="grid" x="675" y="192" width="14" height="17" rx="3"><title>2026-09-03: 1 contribution on September 3rd.</title></rect>
+<style>@keyframes eat244{0%,60.16438%{opacity:1}60.16538%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat244 42s linear infinite;color:#b97840"><title>2026-09-03: 1 contribution on September 3rd.</title><use xlink:href="#carrot" x="676" y="191" width="13" height="18"/></g>
+<rect class="grid" x="675" y="214" width="14" height="17" rx="3"><title>2026-09-04: No contributions on September 4th.</title></rect>
+<rect class="grid" x="675" y="236" width="14" height="17" rx="3"><title>2026-09-05: 1 contribution on September 5th.</title></rect>
+<style>@keyframes eat242{0%,59.67123%{opacity:1}59.67223%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat242 42s linear infinite;color:#b97840"><title>2026-09-05: 1 contribution on September 5th.</title><use xlink:href="#carrot" x="676" y="235" width="13" height="18"/></g>
+<text x="693" y="70" class="muted" font-size="10">Sep</text>
+<rect class="grid" x="693" y="104" width="14" height="17" rx="3"><title>2026-09-06: 11 contributions on September 6th.</title></rect>
+<style>@keyframes eat249{0%,61.39726%{opacity:1}61.39826%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat249 42s linear infinite;color:#db8c43"><title>2026-09-06: 11 contributions on September 6th.</title><use xlink:href="#carrot" x="694" y="103" width="13" height="18"/></g>
+<rect class="grid" x="693" y="126" width="14" height="17" rx="3"><title>2026-09-07: 14 contributions on September 7th.</title></rect>
+<style>@keyframes eat250{0%,61.64384%{opacity:1}61.64484%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat250 42s linear infinite;color:#db8c43"><title>2026-09-07: 14 contributions on September 7th.</title><use xlink:href="#carrot" x="694" y="125" width="13" height="18"/></g>
+<rect class="grid" x="693" y="148" width="14" height="17" rx="3"><title>2026-09-08: 4 contributions on September 8th.</title></rect>
+<style>@keyframes eat251{0%,61.89041%{opacity:1}61.89141%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat251 42s linear infinite;color:#b97840"><title>2026-09-08: 4 contributions on September 8th.</title><use xlink:href="#carrot" x="694" y="147" width="13" height="18"/></g>
+<rect class="grid" x="693" y="170" width="14" height="17" rx="3"><title>2026-09-09: No contributions on September 9th.</title></rect>
+<rect class="grid" x="693" y="192" width="14" height="17" rx="3"><title>2026-09-10: No contributions on September 10th.</title></rect>
+<rect class="grid" x="693" y="214" width="14" height="17" rx="3"><title>2026-09-11: No contributions on September 11th.</title></rect>
+<rect class="grid" x="693" y="236" width="14" height="17" rx="3"><title>2026-09-12: 1 contribution on September 12th.</title></rect>
+<style>@keyframes eat255{0%,62.87671%{opacity:1}62.87771%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat255 42s linear infinite;color:#b97840"><title>2026-09-12: 1 contribution on September 12th.</title><use xlink:href="#carrot" x="694" y="235" width="13" height="18"/></g>
+<rect class="grid" x="711" y="104" width="14" height="17" rx="3"><title>2026-09-13: No contributions on September 13th.</title></rect>
+<rect class="grid" x="711" y="126" width="14" height="17" rx="3"><title>2026-09-14: 17 contributions on September 14th.</title></rect>
+<style>@keyframes eat261{0%,64.35616%{opacity:1}64.35716%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat261 42s linear infinite;color:#db8c43"><title>2026-09-14: 17 contributions on September 14th.</title><use xlink:href="#carrot" x="712" y="125" width="13" height="18"/></g>
+<rect class="grid" x="711" y="148" width="14" height="17" rx="3"><title>2026-09-15: 5 contributions on September 15th.</title></rect>
+<style>@keyframes eat260{0%,64.10959%{opacity:1}64.11059%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat260 42s linear infinite;color:#b97840"><title>2026-09-15: 5 contributions on September 15th.</title><use xlink:href="#carrot" x="712" y="147" width="13" height="18"/></g>
+<rect class="grid" x="711" y="170" width="14" height="17" rx="3"><title>2026-09-16: 9 contributions on September 16th.</title></rect>
+<style>@keyframes eat259{0%,63.86301%{opacity:1}63.86401%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat259 42s linear infinite;color:#b97840"><title>2026-09-16: 9 contributions on September 16th.</title><use xlink:href="#carrot" x="712" y="169" width="13" height="18"/></g>
+<rect class="grid" x="711" y="192" width="14" height="17" rx="3"><title>2026-09-17: 17 contributions on September 17th.</title></rect>
+<style>@keyframes eat258{0%,63.61644%{opacity:1}63.61744%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat258 42s linear infinite;color:#db8c43"><title>2026-09-17: 17 contributions on September 17th.</title><use xlink:href="#carrot" x="712" y="191" width="13" height="18"/></g>
+<rect class="grid" x="711" y="214" width="14" height="17" rx="3"><title>2026-09-18: 17 contributions on September 18th.</title></rect>
+<style>@keyframes eat257{0%,63.36986%{opacity:1}63.37086%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat257 42s linear infinite;color:#db8c43"><title>2026-09-18: 17 contributions on September 18th.</title><use xlink:href="#carrot" x="712" y="213" width="13" height="18"/></g>
+<rect class="grid" x="711" y="236" width="14" height="17" rx="3"><title>2026-09-19: 9 contributions on September 19th.</title></rect>
+<style>@keyframes eat256{0%,63.12329%{opacity:1}63.12429%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat256 42s linear infinite;color:#b97840"><title>2026-09-19: 9 contributions on September 19th.</title><use xlink:href="#carrot" x="712" y="235" width="13" height="18"/></g>
+<rect class="grid" x="729" y="104" width="14" height="17" rx="3"><title>2026-09-20: No contributions on September 20th.</title></rect>
+<rect class="grid" x="729" y="126" width="14" height="17" rx="3"><title>2026-09-21: No contributions on September 21st.</title></rect>
+<rect class="grid" x="729" y="148" width="14" height="17" rx="3"><title>2026-09-22: No contributions on September 22nd.</title></rect>
+<rect class="grid" x="729" y="170" width="14" height="17" rx="3"><title>2026-09-23: 9 contributions on September 23rd.</title></rect>
+<style>@keyframes eat266{0%,65.58904%{opacity:1}65.59004%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat266 42s linear infinite;color:#b97840"><title>2026-09-23: 9 contributions on September 23rd.</title><use xlink:href="#carrot" x="730" y="169" width="13" height="18"/></g>
+<rect class="grid" x="729" y="192" width="14" height="17" rx="3"><title>2026-09-24: No contributions on September 24th.</title></rect>
+<rect class="grid" x="729" y="214" width="14" height="17" rx="3"><title>2026-09-25: No contributions on September 25th.</title></rect>
+<rect class="grid" x="729" y="236" width="14" height="17" rx="3"><title>2026-09-26: No contributions on September 26th.</title></rect>
+<rect class="grid" x="747" y="104" width="14" height="17" rx="3"><title>2026-09-27: No contributions on September 27th.</title></rect>
+<rect class="grid" x="747" y="126" width="14" height="17" rx="3"><title>2026-09-28: No contributions on September 28th.</title></rect>
+<rect class="grid" x="747" y="148" width="14" height="17" rx="3"><title>2026-09-29: No contributions on September 29th.</title></rect>
+<rect class="grid" x="747" y="170" width="14" height="17" rx="3"><title>2026-09-30: No contributions on September 30th.</title></rect>
+<rect class="grid" x="747" y="192" width="14" height="17" rx="3"><title>2026-10-01: No contributions on October 1st.</title></rect>
+<rect class="grid" x="747" y="214" width="14" height="17" rx="3"><title>2026-10-02: No contributions on October 2nd.</title></rect>
+<rect class="grid" x="747" y="236" width="14" height="17" rx="3"><title>2026-10-03: No contributions on October 3rd.</title></rect>
+<text x="765" y="70" class="muted" font-size="10">Oct</text>
+<rect class="grid" x="765" y="104" width="14" height="17" rx="3"><title>2026-10-04: No contributions on October 4th.</title></rect>
+<rect class="grid" x="765" y="126" width="14" height="17" rx="3"><title>2026-10-05: No contributions on October 5th.</title></rect>
+<rect class="grid" x="765" y="148" width="14" height="17" rx="3"><title>2026-10-06: No contributions on October 6th.</title></rect>
+<rect class="grid" x="765" y="170" width="14" height="17" rx="3"><title>2026-10-07: 1 contribution on October 7th.</title></rect>
+<style>@keyframes eat280{0%,69.04110%{opacity:1}69.04210%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat280 42s linear infinite;color:#b97840"><title>2026-10-07: 1 contribution on October 7th.</title><use xlink:href="#carrot" x="766" y="169" width="13" height="18"/></g>
+<rect class="grid" x="765" y="192" width="14" height="17" rx="3"><title>2026-10-08: 4 contributions on October 8th.</title></rect>
+<style>@keyframes eat281{0%,69.28767%{opacity:1}69.28867%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat281 42s linear infinite;color:#b97840"><title>2026-10-08: 4 contributions on October 8th.</title><use xlink:href="#carrot" x="766" y="191" width="13" height="18"/></g>
+<rect class="grid" x="765" y="214" width="14" height="17" rx="3"><title>2026-10-09: No contributions on October 9th.</title></rect>
+<rect class="grid" x="765" y="236" width="14" height="17" rx="3"><title>2026-10-10: 5 contributions on October 10th.</title></rect>
+<style>@keyframes eat283{0%,69.78082%{opacity:1}69.78182%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat283 42s linear infinite;color:#b97840"><title>2026-10-10: 5 contributions on October 10th.</title><use xlink:href="#carrot" x="766" y="235" width="13" height="18"/></g>
+<rect class="grid" x="783" y="104" width="14" height="17" rx="3"><title>2026-10-11: No contributions on October 11th.</title></rect>
+<rect class="grid" x="783" y="126" width="14" height="17" rx="3"><title>2026-10-12: No contributions on October 12th.</title></rect>
+<rect class="grid" x="783" y="148" width="14" height="17" rx="3"><title>2026-10-13: No contributions on October 13th.</title></rect>
+<rect class="grid" x="783" y="170" width="14" height="17" rx="3"><title>2026-10-14: No contributions on October 14th.</title></rect>
+<rect class="grid" x="783" y="192" width="14" height="17" rx="3"><title>2026-10-15: 4 contributions on October 15th.</title></rect>
+<style>@keyframes eat286{0%,70.52055%{opacity:1}70.52155%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat286 42s linear infinite;color:#b97840"><title>2026-10-15: 4 contributions on October 15th.</title><use xlink:href="#carrot" x="784" y="191" width="13" height="18"/></g>
+<rect class="grid" x="783" y="214" width="14" height="17" rx="3"><title>2026-10-16: No contributions on October 16th.</title></rect>
+<rect class="grid" x="783" y="236" width="14" height="17" rx="3"><title>2026-10-17: 9 contributions on October 17th.</title></rect>
+<style>@keyframes eat284{0%,70.02740%{opacity:1}70.02840%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat284 42s linear infinite;color:#b97840"><title>2026-10-17: 9 contributions on October 17th.</title><use xlink:href="#carrot" x="784" y="235" width="13" height="18"/></g>
+<rect class="grid" x="801" y="104" width="14" height="17" rx="3"><title>2026-10-18: 43 contributions on October 18th.</title></rect>
+<style>@keyframes eat291{0%,71.75342%{opacity:1}71.75442%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat291 42s linear infinite;color:#ffbf6b"><title>2026-10-18: 43 contributions on October 18th.</title><use xlink:href="#carrot" x="802" y="103" width="13" height="18"/></g>
+<rect class="grid" x="801" y="126" width="14" height="17" rx="3"><title>2026-10-19: No contributions on October 19th.</title></rect>
+<rect class="grid" x="801" y="148" width="14" height="17" rx="3"><title>2026-10-20: No contributions on October 20th.</title></rect>
+<rect class="grid" x="801" y="170" width="14" height="17" rx="3"><title>2026-10-21: No contributions on October 21st.</title></rect>
+<rect class="grid" x="801" y="192" width="14" height="17" rx="3"><title>2026-10-22: No contributions on October 22nd.</title></rect>
+<rect class="grid" x="801" y="214" width="14" height="17" rx="3"><title>2026-10-23: No contributions on October 23rd.</title></rect>
+<rect class="grid" x="801" y="236" width="14" height="17" rx="3"><title>2026-10-24: No contributions on October 24th.</title></rect>
+<rect class="grid" x="819" y="104" width="14" height="17" rx="3"><title>2026-10-25: No contributions on October 25th.</title></rect>
+<rect class="grid" x="819" y="126" width="14" height="17" rx="3"><title>2026-10-26: No contributions on October 26th.</title></rect>
+<rect class="grid" x="819" y="148" width="14" height="17" rx="3"><title>2026-10-27: No contributions on October 27th.</title></rect>
+<rect class="grid" x="819" y="170" width="14" height="17" rx="3"><title>2026-10-28: 10 contributions on October 28th.</title></rect>
+<style>@keyframes eat301{0%,74.21918%{opacity:1}74.22018%,97%{opacity:0}100%{opacity:1}}</style>
+<g class="eaten" style="animation:eat301 42s linear infinite;color:#b97840"><title>2026-10-28: 10 contributions on October 28th.</title><use xlink:href="#carrot" x="820" y="169" width="13" height="18"/></g>
+<rect class="grid" x="819" y="192" width="14" height="17" rx="3"><title>2026-10-29: No contributions on October 29th.</title></rect>
+<rect class="grid" x="819" y="214" width="14" height="17" rx="3"><title>2026-10-30: No contributions on October 30th.</title></rect>
+<rect class="grid" x="819" y="236" width="14" height="17" rx="3"><title>2026-10-31: No contributions on October 31st.</title></rect>
+<text x="837" y="70" class="muted" font-size="10">Nov</text>
+<rect class="grid" x="837" y="104" width="14" height="17" rx="3"><title>2026-11-01: No contributions on November 1st.</title></rect>
+<rect class="grid" x="837" y="126" width="14" height="17" rx="3"><title>2026-11-02: No contributions on November 2nd.</title></rect>
+<rect class="grid" x="837" y="148" width="14" height="17" rx="3"><title>2026-11-03: No contributions on November 3rd.</title></rect>
+<rect class="grid" x="837" y="170" width="14" height="17" rx="3"><title>2026-11-04: No contributions on November 4th.</title></rect>
+<rect class="grid" x="837" y="192" width="14" height="17" rx="3"><title>2026-11-05: No contributions on November 5th.</title></rect>
+<rect class="grid" x="837" y="214" width="14" height="17" rx="3"><title>2026-11-06: No contributions on November 6th.</title></rect>
+<rect class="grid" x="837" y="236" width="14" height="17" rx="3"><title>2026-11-07: No contributions on November 7th.</title></rect>
+<rect class="grid" x="855" y="104" width="14" height="17" rx="3"><title>2026-11-08: No contributions on November 8th.</title></rect>
+<rect class="grid" x="855" y="126" width="14" height="17" rx="3"><title>2026-11-09: No contributions on November 9th.</title></rect>
+<rect class="grid" x="855" y="148" width="14" height="17" rx="3"><title>2026-11-10: No contributions on November 10th.</title></rect>
+<rect class="grid" x="855" y="170" width="14" height="17" rx="3"><title>2026-11-11: No contributions on November 11th.</title></rect>
+<rect class="grid" x="855" y="192" width="14" height="17" rx="3"><title>2026-11-12: No contributions on November 12th.</title></rect>
+<rect class="grid" x="855" y="214" width="14" height="17" rx="3"><title>2026-11-13: No contributions on November 13th.</title></rect>
+<rect class="grid" x="855" y="236" width="14" height="17" rx="3"><title>2026-11-14: No contributions on November 14th.</title></rect>
+<rect class="grid" x="873" y="104" width="14" height="17" rx="3"><title>2026-11-15: No contributions on November 15th.</title></rect>
+<rect class="grid" x="873" y="126" width="14" height="17" rx="3"><title>2026-11-16: No contributions on November 16th.</title></rect>
+<rect class="grid" x="873" y="148" width="14" height="17" rx="3"><title>2026-11-17: No contributions on November 17th.</title></rect>
+<rect class="grid" x="873" y="170" width="14" height="17" rx="3"><title>2026-11-18: No contributions on November 18th.</title></rect>
+<rect class="grid" x="873" y="192" width="14" height="17" rx="3"><title>2026-11-19: No contributions on November 19th.</title></rect>
+<rect class="grid" x="873" y="214" width="14" height="17" rx="3"><title>2026-11-20: No contributions on November 20th.</title></rect>
+<rect class="grid" x="873" y="236" width="14" height="17" rx="3"><title>2026-11-21: No contributions on November 21st.</title></rect>
+<rect class="grid" x="891" y="104" width="14" height="17" rx="3"><title>2026-11-22: No contributions on November 22nd.</title></rect>
+<rect class="grid" x="891" y="126" width="14" height="17" rx="3"><title>2026-11-23: No contributions on November 23rd.</title></rect>
+<rect class="grid" x="891" y="148" width="14" height="17" rx="3"><title>2026-11-24: No contributions on November 24th.</title></rect>
+<rect class="grid" x="891" y="170" width="14" height="17" rx="3"><title>2026-11-25: No contributions on November 25th.</title></rect>
+<rect class="grid" x="891" y="192" width="14" height="17" rx="3"><title>2026-11-26: No contributions on November 26th.</title></rect>
+<rect class="grid" x="891" y="214" width="14" height="17" rx="3"><title>2026-11-27: No contributions on November 27th.</title></rect>
+<rect class="grid" x="891" y="236" width="14" height="17" rx="3"><title>2026-11-28: No contributions on November 28th.</title></rect>
+<rect class="grid" x="909" y="104" width="14" height="17" rx="3"><title>2026-11-29: No contributions on November 29th.</title></rect>
+<rect class="grid" x="909" y="126" width="14" height="17" rx="3"><title>2026-11-30: No contributions on November 30th.</title></rect>
+<rect class="grid" x="909" y="148" width="14" height="17" rx="3"><title>2026-12-01: No contributions on December 1st.</title></rect>
+<rect class="grid" x="909" y="170" width="14" height="17" rx="3"><title>2026-12-02: No contributions on December 2nd.</title></rect>
+<rect class="grid" x="909" y="192" width="14" height="17" rx="3"><title>2026-12-03: No contributions on December 3rd.</title></rect>
+<rect class="grid" x="909" y="214" width="14" height="17" rx="3"><title>2026-12-04: No contributions on December 4th.</title></rect>
+<rect class="grid" x="909" y="236" width="14" height="17" rx="3"><title>2026-12-05: No contributions on December 5th.</title></rect>
+<text x="927" y="70" class="muted" font-size="10">Dec</text>
+<rect class="grid" x="927" y="104" width="14" height="17" rx="3"><title>2026-12-06: No contributions on December 6th.</title></rect>
+<rect class="grid" x="927" y="126" width="14" height="17" rx="3"><title>2026-12-07: No contributions on December 7th.</title></rect>
+<rect class="grid" x="927" y="148" width="14" height="17" rx="3"><title>2026-12-08: No contributions on December 8th.</title></rect>
+<rect class="grid" x="927" y="170" width="14" height="17" rx="3"><title>2026-12-09: No contributions on December 9th.</title></rect>
+<rect class="grid" x="927" y="192" width="14" height="17" rx="3"><title>2026-12-10: No contributions on December 10th.</title></rect>
+<rect class="grid" x="927" y="214" width="14" height="17" rx="3"><title>2026-12-11: No contributions on December 11th.</title></rect>
+<rect class="grid" x="927" y="236" width="14" height="17" rx="3"><title>2026-12-12: No contributions on December 12th.</title></rect>
+<rect class="grid" x="945" y="104" width="14" height="17" rx="3"><title>2026-12-13: No contributions on December 13th.</title></rect>
+<rect class="grid" x="945" y="126" width="14" height="17" rx="3"><title>2026-12-14: No contributions on December 14th.</title></rect>
+<rect class="grid" x="945" y="148" width="14" height="17" rx="3"><title>2026-12-15: No contributions on December 15th.</title></rect>
+<rect class="grid" x="945" y="170" width="14" height="17" rx="3"><title>2026-12-16: No contributions on December 16th.</title></rect>
+<rect class="grid" x="945" y="192" width="14" height="17" rx="3"><title>2026-12-17: No contributions on December 17th.</title></rect>
+<rect class="grid" x="945" y="214" width="14" height="17" rx="3"><title>2026-12-18: No contributions on December 18th.</title></rect>
+<rect class="grid" x="945" y="236" width="14" height="17" rx="3"><title>2026-12-19: No contributions on December 19th.</title></rect>
+<rect class="grid" x="963" y="104" width="14" height="17" rx="3"><title>2026-12-20: No contributions on December 20th.</title></rect>
+<rect class="grid" x="963" y="126" width="14" height="17" rx="3"><title>2026-12-21: No contributions on December 21st.</title></rect>
+<rect class="grid" x="963" y="148" width="14" height="17" rx="3"><title>2026-12-22: No contributions on December 22nd.</title></rect>
+<rect class="grid" x="963" y="170" width="14" height="17" rx="3"><title>2026-12-23: No contributions on December 23rd.</title></rect>
+<rect class="grid" x="963" y="192" width="14" height="17" rx="3"><title>2026-12-24: No contributions on December 24th.</title></rect>
+<rect class="grid" x="963" y="214" width="14" height="17" rx="3"><title>2026-12-25: No contributions on December 25th.</title></rect>
+<rect class="grid" x="963" y="236" width="14" height="17" rx="3"><title>2026-12-26: No contributions on December 26th.</title></rect>
+<rect class="grid" x="981" y="104" width="14" height="17" rx="3"><title>2026-12-27: No contributions on December 27th.</title></rect>
+<rect class="grid" x="981" y="126" width="14" height="17" rx="3"><title>2026-12-28: No contributions on December 28th.</title></rect>
+<rect class="grid" x="981" y="148" width="14" height="17" rx="3"><title>2026-12-29: No contributions on December 29th.</title></rect>
+<rect class="grid" x="981" y="170" width="14" height="17" rx="3"><title>2026-12-30: No contributions on December 30th.</title></rect>
+<rect class="grid" x="981" y="192" width="14" height="17" rx="3"><title>2026-12-31: No contributions on December 31st.</title></rect>
+<g class="traveler"><animateTransform attributeName="transform" type="translate" dur="42s" repeatCount="indefinite" values="13 198;36 198;36 220;36 242;54 242;54 220;54 198;54 176;54 154;54 132;54 110;72 110;72 132;72 154;72 176;72 198;72 220;72 242;90 242;90 220;90 198;90 176;90 154;90 132;90 110;108 110;108 132;108 154;108 176;108 198;108 220;108 242;126 242;126 220;126 198;126 176;126 154;126 132;126 110;144 110;144 132;144 154;144 176;144 198;144 220;144 242;162 242;162 220;162 198;162 176;162 154;162 132;162 110;180 110;180 132;180 154;180 176;180 198;180 220;180 242;198 242;198 220;198 198;198 176;198 154;198 132;198 110;216 110;216 132;216 154;216 176;216 198;216 220;216 242;234 242;234 220;234 198;234 176;234 154;234 132;234 110;252 110;252 132;252 154;252 176;252 198;252 220;252 242;270 242;270 220;270 198;270 176;270 154;270 132;270 110;288 110;288 132;288 154;288 176;288 198;288 220;288 242;306 242;306 220;306 198;306 176;306 154;306 132;306 110;324 110;324 132;324 154;324 176;324 198;324 220;324 242;342 242;342 220;342 198;342 176;342 154;342 132;342 110;360 110;360 132;360 154;360 176;360 198;360 220;360 242;378 242;378 220;378 198;378 176;378 154;378 132;378 110;396 110;396 132;396 154;396 176;396 198;396 220;396 242;414 242;414 220;414 198;414 176;414 154;414 132;414 110;432 110;432 132;432 154;432 176;432 198;432 220;432 242;450 242;450 220;450 198;450 176;450 154;450 132;450 110;468 110;468 132;468 154;468 176;468 198;468 220;468 242;486 242;486 220;486 198;486 176;486 154;486 132;486 110;504 110;504 132;504 154;504 176;504 198;504 220;504 242;522 242;522 220;522 198;522 176;522 154;522 132;522 110;540 110;540 132;540 154;540 176;540 198;540 220;540 242;558 242;558 220;558 198;558 176;558 154;558 132;558 110;576 110;576 132;576 154;576 176;576 198;576 220;576 242;594 242;594 220;594 198;594 176;594 154;594 132;594 110;612 110;612 132;612 154;612 176;612 198;612 220;612 242;630 242;630 220;630 198;630 176;630 154;630 132;630 110;648 110;648 132;648 154;648 176;648 198;648 220;648 242;666 242;666 220;666 198;666 176;666 154;666 132;666 110;684 110;684 132;684 154;684 176;684 198;684 220;684 242;702 242;702 220;702 198;702 176;702 154;702 132;702 110;720 110;720 132;720 154;720 176;720 198;720 220;720 242;738 242;738 220;738 198;738 176;738 154;738 132;738 110;756 110;756 132;756 154;756 176;756 198;756 220;756 242;774 242;774 220;774 198;774 176;774 154;774 132;774 110;792 110;792 132;792 154;792 176;792 198;792 220;792 242;810 242;810 220;810 198;810 176;810 154;810 132;810 110;828 110;828 132;828 154;828 176;828 198;828 220;828 242;846 242;846 220;846 198;846 176;846 154;846 132;846 110;864 110;864 132;864 154;864 176;864 198;864 220;864 242;882 242;882 220;882 198;882 176;882 154;882 132;882 110;900 110;900 132;900 154;900 176;900 198;900 220;900 242;918 242;918 220;918 198;918 176;918 154;918 132;918 110;936 110;936 132;936 154;936 176;936 198;936 220;936 242;954 242;954 220;954 198;954 176;954 154;954 132;954 110;972 110;972 132;972 154;972 176;972 198;972 198" keyTimes="0.0000000;0.0024658;0.0049315;0.0073973;0.0098630;0.0123288;0.0147945;0.0172603;0.0197260;0.0221918;0.0246575;0.0271233;0.0295890;0.0320548;0.0345205;0.0369863;0.0394521;0.0419178;0.0443836;0.0468493;0.0493151;0.0517808;0.0542466;0.0567123;0.0591781;0.0616438;0.0641096;0.0665753;0.0690411;0.0715068;0.0739726;0.0764384;0.0789041;0.0813699;0.0838356;0.0863014;0.0887671;0.0912329;0.0936986;0.0961644;0.0986301;0.1010959;0.1035616;0.1060274;0.1084932;0.1109589;0.1134247;0.1158904;0.1183562;0.1208219;0.1232877;0.1257534;0.1282192;0.1306849;0.1331507;0.1356164;0.1380822;0.1405479;0.1430137;0.1454795;0.1479452;0.1504110;0.1528767;0.1553425;0.1578082;0.1602740;0.1627397;0.1652055;0.1676712;0.1701370;0.1726027;0.1750685;0.1775342;0.1800000;0.1824658;0.1849315;0.1873973;0.1898630;0.1923288;0.1947945;0.1972603;0.1997260;0.2021918;0.2046575;0.2071233;0.2095890;0.2120548;0.2145205;0.2169863;0.2194521;0.2219178;0.2243836;0.2268493;0.2293151;0.2317808;0.2342466;0.2367123;0.2391781;0.2416438;0.2441096;0.2465753;0.2490411;0.2515068;0.2539726;0.2564384;0.2589041;0.2613699;0.2638356;0.2663014;0.2687671;0.2712329;0.2736986;0.2761644;0.2786301;0.2810959;0.2835616;0.2860274;0.2884932;0.2909589;0.2934247;0.2958904;0.2983562;0.3008219;0.3032877;0.3057534;0.3082192;0.3106849;0.3131507;0.3156164;0.3180822;0.3205479;0.3230137;0.3254795;0.3279452;0.3304110;0.3328767;0.3353425;0.3378082;0.3402740;0.3427397;0.3452055;0.3476712;0.3501370;0.3526027;0.3550685;0.3575342;0.3600000;0.3624658;0.3649315;0.3673973;0.3698630;0.3723288;0.3747945;0.3772603;0.3797260;0.3821918;0.3846575;0.3871233;0.3895890;0.3920548;0.3945205;0.3969863;0.3994521;0.4019178;0.4043836;0.4068493;0.4093151;0.4117808;0.4142466;0.4167123;0.4191781;0.4216438;0.4241096;0.4265753;0.4290411;0.4315068;0.4339726;0.4364384;0.4389041;0.4413699;0.4438356;0.4463014;0.4487671;0.4512329;0.4536986;0.4561644;0.4586301;0.4610959;0.4635616;0.4660274;0.4684932;0.4709589;0.4734247;0.4758904;0.4783562;0.4808219;0.4832877;0.4857534;0.4882192;0.4906849;0.4931507;0.4956164;0.4980822;0.5005479;0.5030137;0.5054795;0.5079452;0.5104110;0.5128767;0.5153425;0.5178082;0.5202740;0.5227397;0.5252055;0.5276712;0.5301370;0.5326027;0.5350685;0.5375342;0.5400000;0.5424658;0.5449315;0.5473973;0.5498630;0.5523288;0.5547945;0.5572603;0.5597260;0.5621918;0.5646575;0.5671233;0.5695890;0.5720548;0.5745205;0.5769863;0.5794521;0.5819178;0.5843836;0.5868493;0.5893151;0.5917808;0.5942466;0.5967123;0.5991781;0.6016438;0.6041096;0.6065753;0.6090411;0.6115068;0.6139726;0.6164384;0.6189041;0.6213699;0.6238356;0.6263014;0.6287671;0.6312329;0.6336986;0.6361644;0.6386301;0.6410959;0.6435616;0.6460274;0.6484932;0.6509589;0.6534247;0.6558904;0.6583562;0.6608219;0.6632877;0.6657534;0.6682192;0.6706849;0.6731507;0.6756164;0.6780822;0.6805479;0.6830137;0.6854795;0.6879452;0.6904110;0.6928767;0.6953425;0.6978082;0.7002740;0.7027397;0.7052055;0.7076712;0.7101370;0.7126027;0.7150685;0.7175342;0.7200000;0.7224658;0.7249315;0.7273973;0.7298630;0.7323288;0.7347945;0.7372603;0.7397260;0.7421918;0.7446575;0.7471233;0.7495890;0.7520548;0.7545205;0.7569863;0.7594521;0.7619178;0.7643836;0.7668493;0.7693151;0.7717808;0.7742466;0.7767123;0.7791781;0.7816438;0.7841096;0.7865753;0.7890411;0.7915068;0.7939726;0.7964384;0.7989041;0.8013699;0.8038356;0.8063014;0.8087671;0.8112329;0.8136986;0.8161644;0.8186301;0.8210959;0.8235616;0.8260274;0.8284932;0.8309589;0.8334247;0.8358904;0.8383562;0.8408219;0.8432877;0.8457534;0.8482192;0.8506849;0.8531507;0.8556164;0.8580822;0.8605479;0.8630137;0.8654795;0.8679452;0.8704110;0.8728767;0.8753425;0.8778082;0.8802740;0.8827397;0.8852055;0.8876712;0.8901370;0.8926027;0.8950685;0.8975342;0.9000000;1" calcMode="linear"/>
+<animate attributeName="opacity" dur="42s" repeatCount="indefinite" values="1;1;0;0;1" keyTimes="0;.91;.94;.98;1"/>
+<g class="walk" stroke-linecap="round" stroke-linejoin="round">
+<!-- Tiny hand-drawn donkey, facing the next carrot. -->
+<path d="M-14-2q-8-8-8-1q3 3 6 3" fill="none" stroke="#727c91" stroke-width="2"/>
+<path class="leg back" d="m-9 3-1 10h4l1-10" fill="#697487"/>
+<path class="leg" d="m3 3 1 10h4L7 2" fill="#8994a8"/>
+<ellipse cx="-3" cy="-1" rx="12" ry="7" fill="#9ca9bc"/>
+<path d="M3-2 5-13 11-14 14-3" fill="#a8b5c8"/>
+<path d="M6-13Q0-29 5-28Q10-25 10-14M11-14Q10-31 15-28Q18-24 15-13" fill="#9ca9bc" stroke="#65738a" stroke-width="1"/>
+<path d="m5-25 3 9m6-10-1 10" stroke="#e5b4ba" stroke-width="1.5"/>
+<path d="M3-13 5-20 8-17 9-13" fill="#485267"/>
+<path d="M6-14Q16-18 18-9L19-4Q15 1 9-4L6-8" fill="#b3bfd1"/>
+<ellipse cx="16" cy="-4" rx="6" ry="4" fill="#e0d9cc"/>
+<circle cx="13" cy="-11" r="1.2" fill="#253041"/><circle cx="18" cy="-5" r=".8" fill="#6c6870"/>
+<path d="m16-1 3-1" fill="none" stroke="#7e6c60" stroke-width=".8"/>
+</g></g>
+</svg>
