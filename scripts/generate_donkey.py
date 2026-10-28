@@ -32,9 +32,11 @@ def generate(source=None):
         positions[dt]=(col,row,level,ident)
     route=sorted(positions,key=lambda dt:(positions[dt][0],positions[dt][1] if positions[dt][0]%2==0 else -positions[dt][1]))
     # Continuous adjacent steps, including an initial off-grid entrance.
-    points=[(60,132)]+[(80+positions[dt][0]*17,132+positions[dt][1]*23) for dt in route]
+    def screen(col, row):
+        return 62+(col%27)*35, 100+(col//27)*340+row*36
+    points=[(40,100)]+[screen(positions[dt][0],positions[dt][1]) for dt in route]
     active=sum(level>0 for _,level,_ in days)
-    out=['''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1040" height="325" viewBox="0 0 1040 325" role="img" aria-labelledby="title desc">
+    out=['''<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1040" height="710" viewBox="0 0 1040 710" role="img" aria-labelledby="title desc">
 <title id="title">A little donkey eating ZiDiYao’s contribution carrots</title>
 <desc id="desc">A looping animation based on the real public GitHub contribution calendar. Each carrot is an active day. The donkey visits every day and eats the carrots. Brighter carrots mean more contributions.</desc>
 <defs><symbol id="carrot" viewBox="0 0 18 22"><path d="M8 7Q1 0 5 0Q9 0 10 6Q11-2 14 1Q16 4 11 8" fill="#83ce70"/><path d="M3 8Q8 4 14 9L6 21Q4 23 4 19Z" fill="currentColor"/><path d="m5 11 4 2m-3 3 2 1" stroke="#b75e28" stroke-width="1" stroke-linecap="round"/></symbol></defs>
@@ -47,28 +49,31 @@ text{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}
 .walk{animation:hop .32s ease-in-out infinite}.leg{transform-box:fill-box;transform-origin:50% 0;animation:leg .32s ease-in-out infinite}.back{animation-delay:-.16s}
 @media(prefers-reduced-motion:reduce){.eaten{animation:none!important}.walk,.leg{animation:none}.traveler,.progress{display:none}}
 </style>
-<rect class="bg" x=".5" y=".5" width="1039" height="324" rx="14" stroke="#30363d"/>
-<text x="28" y="34" class="heading" font-size="17" font-weight="600">A little donkey. A year of carrots.</text>''']
+<rect class="bg" x=".5" y=".5" width="1039" height="709" rx="14" stroke="#30363d"/>
+''']
     lastmonth=None
     for dt,level,ident in days:
-        col,row,_,_=positions[dt]; x=80+col*17; y=132+row*23; d=date.fromisoformat(dt)
+        col,row,_,_=positions[dt]; x,y=screen(col,row); d=date.fromisoformat(dt)
         if row==0 and d.month!=lastmonth and (col>0 or d.day<=7):
-            out.append(f'<text x="{x-7}" y="67" class="muted" font-size="10">{d:%b}</text>');lastmonth=d.month
+            out.append(f'<text x="{x-7}" y="{60+(col//27)*340}" class="muted" font-size="14">{d:%b}</text>');lastmonth=d.month
         label=escape(dt+': '+cal.labels.get(ident,'').strip())
-        out.append(f'<rect class="grid" x="{x-7}" y="{y-8}" width="14" height="17" rx="3"><title>{label}</title></rect>')
+        out.append(f'<rect class="grid" x="{x-14}" y="{y-14}" width="28" height="28" rx="5"><title>{label}</title></rect>')
         if level:
             idx=route.index(dt)+1; t=idx/(len(points)-1)*90
             # The mouth reaches this carrot at the corresponding path keyframe.
             out.append(f'<style>@keyframes eat{idx}'+'{'+f'0%,{t:.5f}%'+'{opacity:1}'+f'{t+.001:.5f}%,97%'+'{opacity:0}100%{opacity:1}}</style>')
             color=['','#b97840','#db8c43','#f4a04a','#ffbf6b'][level]
-            out.append(f'<g class="eaten" style="animation:eat{idx} 42s linear infinite;color:{color}"><title>{label}</title><use xlink:href="#carrot" x="{x-6}" y="{y-9}" width="13" height="18"/></g>')
+            out.append(f'<g class="eaten" style="animation:eat{idx} 42s linear infinite;color:{color}"><title>{label}</title><use xlink:href="#carrot" x="{x-11}" y="{y-14}" width="22" height="28"/></g>')
     # Position donkey's muzzle on each cell. Keep a short pause before the loop resets.
     values=';'.join(f'{x-16} {y-2}' for x,y in points)
     times=';'.join(f'{i/(len(points)-1)*.9:.7f}' for i in range(len(points)))
     values+=';'+f'{points[-1][0]-16} {points[-1][1]-2}'
     times+=';1'
+    transition=next(i for i,dt in enumerate(route,1) if positions[dt][0]>=27)
+    fade_start=(transition-1)/(len(points)-1)*.9
+    fade_end=transition/(len(points)-1)*.9
     out.append(f'''<g class="traveler"><animateTransform attributeName="transform" type="translate" dur="42s" repeatCount="indefinite" values="{values}" keyTimes="{times}" calcMode="linear"/>
-<animate attributeName="opacity" dur="42s" repeatCount="indefinite" values="1;1;0;0;1" keyTimes="0;.91;.94;.98;1"/>
+<animate attributeName="opacity" dur="42s" repeatCount="indefinite" values="1;1;0;0;1;1;0;0;1" keyTimes="0;{fade_start-.001:.7f};{fade_start:.7f};{fade_end:.7f};{fade_end+.001:.7f};.91;.94;.98;1"/>
 <g class="walk" stroke-linecap="round" stroke-linejoin="round">
 <!-- Tiny hand-drawn donkey, facing the next carrot. -->
 <path d="M-14-2q-8-8-8-1q3 3 6 3" fill="none" stroke="#727c91" stroke-width="2"/>
@@ -86,7 +91,7 @@ text{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,sans-serif}
 </g></g>''')
     out.append('</svg>')
     ROOT.joinpath('assets').mkdir(exist_ok=True)
-    ROOT.joinpath('assets/donkey-carrots-small.svg').write_text('\n'.join(out))
+    ROOT.joinpath('assets/donkey-heatmap.svg').write_text('\n'.join(out))
     # Route must visit every real day once using neighboring cells only.
     assert len(set(route))==len(days)
     assert all(abs(x2-x1)+abs(y2-y1)==1 for (x1,y1),(x2,y2) in zip([(positions[d][0],positions[d][1]) for d in route],[(positions[d][0],positions[d][1]) for d in route][1:]))
